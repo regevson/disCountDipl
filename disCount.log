@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.18)  1 JAN 2019 16:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.18)  5 FEB 2019 22:49
 entering extended mode
 **./disCount.tex
 (disCount.tex
@@ -304,18 +304,18 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 )) (disCount.aux)
 \openout1 = `disCount.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
@@ -423,82 +423,128 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 <images/ferrarilogo.jpg, id=1, 86.067pt x 113.661pt>
 File: images/ferrarilogo.jpg Graphic file (type jpg)
 <use images/ferrarilogo.jpg>
-Package pdftex.def Info: images/ferrarilogo.jpg  used on input line 30. on inpu
-t line 30.
+Package pdftex.def Info: images/ferrarilogo.jpg  used on input line 31. on inpu
+t line 31.
 Package pdftex.def Info: Requested size: 65.04034pt x 85.89589pt on input line 
-30.
+31.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\uni-0.def"
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 ) [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/ferrarilogo.jpg>
-] [1]
-Underfull \hbox (badness 10000) in paragraph at lines 70--72
+]
+Underfull \hbox (badness 10000) in paragraph at lines 66--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--72
+Underfull \hbox (badness 10000) in paragraph at lines 66--68
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+[1]
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
-[3] (disCount.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 7.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+
+ []
+
+[2] [3]
+<images/eid.pdf, id=21, pagebox=cropbox, 614.295pt x 845.1575pt>
+File: images/eid.pdf Graphic file (type pdf)
+<use images/eid.pdf>
+Package pdftex.def Info: images/eid.pdf  used on input line 91. on input line 9
+1.
+Package pdftex.def Info: Requested size: 614.29349pt x 845.15544pt on input lin
+e 91.
+File: images/eid.pdf Graphic file (type pdf)
+<use images/eid.pdf>
+Package pdftex.def Info: images/eid.pdf  used on input line 91. on input line 9
+1.
+Package pdftex.def Info: Requested size: 614.29349pt x 845.15544pt on input lin
+e 91.
+<images/eid.pdf, id=24, page=1, pagebox=cropbox, 614.295pt x 845.1575pt>
+File: images/eid.pdf Graphic file (type pdf)
+<use images/eid.pdf, page 1>
+Package pdftex.def Info: images/eid.pdf , page1 used on input line 91. on input
+ line 91.
+Package pdftex.def Info: Requested size: 614.29349pt x 845.15544pt on input lin
+e 91.
+File: images/eid.pdf Graphic file (type pdf)
+<use images/eid.pdf, page 1>
+Package pdftex.def Info: images/eid.pdf , page1 used on input line 91. on input
+ line 91.
+Package pdftex.def Info: Requested size: 597.78697pt x 822.4455pt on input line
+ 91.
+File: images/eid.pdf Graphic file (type pdf)
+<use images/eid.pdf, page 1>
+Package pdftex.def Info: images/eid.pdf , page1 used on input line 91. on input
+ line 91.
+Package pdftex.def Info: Requested size: 597.78697pt x 822.4455pt on input line
+ 91.
+File: images/eid.pdf Graphic file (type pdf)
+<use images/eid.pdf, page 1>
+Package pdftex.def Info: images/eid.pdf , page1 used on input line 91. on input
+ line 91.
+Package pdftex.def Info: Requested size: 597.78697pt x 822.4455pt on input line
+ 91.
+File: images/eid.pdf Graphic file (type pdf)
+<use images/eid.pdf, page 1>
+Package pdftex.def Info: images/eid.pdf , page1 used on input line 91. on input
+ line 91.
+Package pdftex.def Info: Requested size: 597.78697pt x 822.4455pt on input line
+ 91.
+ [4 <./images/eid.pdf>] (disCount.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 7.
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [4
+) [5
 
-] [5] [6])
+] [6] [7] [8])
 \tf@toc=\write3
 \openout3 = `disCount.toc'.
 
 
-[7] [8] [9
+[9] [10
 
-] [10]
+]
 Kapitel 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--124
+Underfull \hbox (badness 10000) in paragraph at lines 116--122
 
  []
 
@@ -516,18 +562,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 ]
 Kapitel 2.
 
-LaTeX Warning: Citation `DPGOF' undefined on input line 144.
+LaTeX Warning: Citation `DPGOF' undefined on input line 142.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
 
-LaTeX Warning: Citation `DPGOF' undefined on input line 148.
+LaTeX Warning: Citation `DPGOF' undefined on input line 146.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--149
+Underfull \hbox (badness 10000) in paragraph at lines 145--147
 
  []
 
@@ -535,12 +581,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--149
 
 ]
 
-LaTeX Warning: Citation `Vererbung' undefined on input line 161.
+LaTeX Warning: Citation `Vererbung' undefined on input line 159.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15] ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Overfull \hbox (17.20427pt too wide) in paragraph at lines 175--176
+Overfull \hbox (17.20427pt too wide) in paragraph at lines 173--174
 \T1/cmr/m/n/12 Komponenten hin-zu. So-bald der User die Da-ten ein-ge-ge-ben ha
 t und auf den Bestätigungs-
  []
@@ -551,115 +603,81 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15]
+[16]
+Kapitel 3.
+[17
+
+]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16]
-Kapitel 3.
-[17
-
-] [18
+[18] [19
 
 ]
 Kapitel 4.
-<images/bs_types.jpg, id=74, 287.1528pt x 257.763pt>
+<images/bs_types.jpg, id=84, 287.1528pt x 257.763pt>
 File: images/bs_types.jpg Graphic file (type jpg)
 <use images/bs_types.jpg>
-Package pdftex.def Info: images/bs_types.jpg  used on input line 228. on input 
-line 228.
+Package pdftex.def Info: images/bs_types.jpg  used on input line 226. on input 
+line 226.
 Package pdftex.def Info: Requested size: 158.49098pt x 142.26378pt on input lin
-e 228.
+e 226.
 
-LaTeX Warning: Citation `RW1' undefined on input line 232.
-
-
-LaTeX Warning: Citation `RW1' undefined on input line 232.
+LaTeX Warning: Citation `RW1' undefined on input line 230.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
+LaTeX Warning: Citation `RW1' undefined on input line 230.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
  []
+
+
+LaTeX Warning: Citation `RW1' undefined on input line 233.
+
+
+LaTeX Warning: Citation `RW1' undefined on input line 233.
 
 
 LaTeX Warning: Citation `RW1' undefined on input line 235.
 
 
-LaTeX Warning: Citation `RW1' undefined on input line 235.
-
-
-LaTeX Warning: Citation `RW1' undefined on input line 237.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 235--238
+Underfull \hbox (badness 10000) in paragraph at lines 233--236
 
  []
 
-[19
+[20
 
  <./images/bs_types.jpg>]
 
+LaTeX Warning: Citation `RW1' undefined on input line 238.
+
+
+LaTeX Warning: Citation `RW1' undefined on input line 239.
+
+
 LaTeX Warning: Citation `RW1' undefined on input line 240.
 
-
-LaTeX Warning: Citation `RW1' undefined on input line 241.
-
-
-LaTeX Warning: Citation `RW1' undefined on input line 242.
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 246.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 244.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 246.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 244.
 
 
-LaTeX Warning: Citation `RW1' undefined on input line 248.
+LaTeX Warning: Citation `RW1' undefined on input line 246.
 
 
-LaTeX Warning: Citation `RW1' undefined on input line 251.
+LaTeX Warning: Citation `RW1' undefined on input line 249.
 
 
-LaTeX Warning: Citation `RW1' undefined on input line 259.
-
-
-LaTeX Warning: Citation `RW4' undefined on input line 263.
-
-
-LaTeX Warning: Citation `RW4' undefined on input line 263.
-
-
-LaTeX Warning: Citation `RW4' undefined on input line 265.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[20]
-
-LaTeX Warning: Citation `RW4' undefined on input line 271.
-
-
-LaTeX Warning: Citation `RW4' undefined on input line 277.
-
-
-LaTeX Warning: Citation `RW4' undefined on input line 280.
-
-
-LaTeX Warning: Citation `RW4' undefined on input line 289.
-
-
-LaTeX Warning: Citation `RW4' undefined on input line 290.
-
-
-LaTeX Warning: Citation `RW4' undefined on input line 291.
+LaTeX Warning: Citation `RW1' undefined on input line 257.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -669,10 +687,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [21]
 
-LaTeX Warning: Citation `RW4' undefined on input line 295.
+LaTeX Warning: Citation `RW4' undefined on input line 261.
 
 
-LaTeX Warning: Citation `RW4' undefined on input line 300.
+LaTeX Warning: Citation `RW4' undefined on input line 261.
+
+
+LaTeX Warning: Citation `RW4' undefined on input line 263.
+
+
+LaTeX Warning: Citation `RW4' undefined on input line 269.
+
+
+LaTeX Warning: Citation `RW4' undefined on input line 275.
+
+
+LaTeX Warning: Citation `RW4' undefined on input line 278.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -681,22 +711,46 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [22]
+
+LaTeX Warning: Citation `RW4' undefined on input line 287.
+
+
+LaTeX Warning: Citation `RW4' undefined on input line 288.
+
+
+LaTeX Warning: Citation `RW4' undefined on input line 289.
+
+
+LaTeX Warning: Citation `RW4' undefined on input line 293.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[23]
+
+LaTeX Warning: Citation `RW4' undefined on input line 298.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[24]
 Kapitel 5.
 
-Overfull \hbox (9.23561pt too wide) in paragraph at lines 312--313
+Overfull \hbox (9.23561pt too wide) in paragraph at lines 310--311
 \T1/cmr/m/n/12 Wie im Rechnungswesen-Abschnitt schon er-klärt wur-de, kom-men B
 u-chungs-sät-ze grund-
  []
 
-[23
+[25
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 345--347
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 367--368
+Underfull \hbox (badness 10000) in paragraph at lines 343--345
 
  []
 
@@ -706,8 +760,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24]
-Overfull \hbox (0.62398pt too wide) in paragraph at lines 413--414
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 353--354
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
+
+ []
+
+
+Overfull \hbox (0.62398pt too wide) in paragraph at lines 363--364
 \T1/cmr/m/n/12 Kalkulationen sind die ein-fachs-ten und vor-her-seh-bars-ten Be
 -rech-nun-gen im Pro-gramm.
  []
@@ -718,124 +782,132 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25]
+[27]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26]
+[28]
 Kapitel 6.
-<images/hauptarbeitsflaechen.jpg, id=103, 1156.32pt x 619.113pt>
+<images/hauptarbeitsflaechen.jpg, id=116, 1156.32pt x 619.113pt>
 File: images/hauptarbeitsflaechen.jpg Graphic file (type jpg)
 <use images/hauptarbeitsflaechen.jpg>
-Package pdftex.def Info: images/hauptarbeitsflaechen.jpg  used on input line 43
-1. on input line 431.
+Package pdftex.def Info: images/hauptarbeitsflaechen.jpg  used on input line 38
+1. on input line 381.
 Package pdftex.def Info: Requested size: 371.98845pt x 199.16928pt on input lin
-e 431.
-[27
+e 381.
 
- <./images/hauptarbeitsflaechen.jpg>]
-<images/einstellungen.jpg, id=107, 386.6445pt x 561.297pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[29
+
+]
+<images/einstellungen.jpg, id=120, 386.6445pt x 561.297pt>
 File: images/einstellungen.jpg Graphic file (type jpg)
 <use images/einstellungen.jpg>
-Package pdftex.def Info: images/einstellungen.jpg  used on input line 444. on i
-nput line 444.
+Package pdftex.def Info: images/einstellungen.jpg  used on input line 394. on i
+nput line 394.
 Package pdftex.def Info: Requested size: 254.79677pt x 369.88582pt on input lin
-e 444.
-<images/suchen.jpg, id=108, 1155.71774pt x 127.677pt>
+e 394.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/suchen.jpg, id=121, 1155.71774pt x 127.677pt>
 File: images/suchen.jpg Graphic file (type jpg)
 <use images/suchen.jpg>
-Package pdftex.def Info: images/suchen.jpg  used on input line 453. on input li
-ne 453.
+Package pdftex.def Info: images/suchen.jpg  used on input line 403. on input li
+ne 403.
 Package pdftex.def Info: Requested size: 455.24408pt x 50.29256pt on input line
- 453.
+ 403.
 
-Overfull \hbox (21.62408pt too wide) in paragraph at lines 453--454
+Overfull \hbox (21.62408pt too wide) in paragraph at lines 403--404
  [][] 
  []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 15.04742pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[28 <./images/einstellungen.jpg>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 15.04742pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[29 <./images/suchen.jpg>] [30
-
-]
-Kapitel 7.
-[31
-
-]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 15.04742pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[32]
-Kapitel 8.
-[33
-
-]
-<images/missingBS.jpg, id=128, 597.432pt x 264.5082pt>
-File: images/missingBS.jpg Graphic file (type jpg)
-<use images/missingBS.jpg>
-Package pdftex.def Info: images/missingBS.jpg  used on input line 511. on input
- line 511.
-Package pdftex.def Info: Requested size: 321.33223pt x 142.26378pt on input lin
-e 511.
-<images/BSoverload.jpg, id=129, 597.432pt x 264.5082pt>
-File: images/BSoverload.jpg Graphic file (type jpg)
-<use images/BSoverload.jpg>
-Package pdftex.def Info: images/BSoverload.jpg  used on input line 525. on inpu
-t line 525.
-Package pdftex.def Info: Requested size: 321.33223pt x 142.26378pt on input lin
-e 525.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 15.04742pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[34 <./images/missingBS.jpg>]
+[30 <./images/hauptarbeitsflaechen.jpg>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 15.04742pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31 <./images/einstellungen.jpg> <./images/suchen.jpg>] [32
+
+]
+Kapitel 7.
+[33
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 15.04742pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[34]
+Kapitel 8.
+[35
+
+]
+<images/missingBS.jpg, id=141, 597.432pt x 264.5082pt>
+File: images/missingBS.jpg Graphic file (type jpg)
+<use images/missingBS.jpg>
+Package pdftex.def Info: images/missingBS.jpg  used on input line 461. on input
+ line 461.
+Package pdftex.def Info: Requested size: 321.33223pt x 142.26378pt on input lin
+e 461.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[35 <./images/BSoverload.jpg>]
+[36 <./images/missingBS.jpg>]
+<images/BSoverload.jpg, id=146, 597.432pt x 264.5082pt>
+File: images/BSoverload.jpg Graphic file (type jpg)
+<use images/BSoverload.jpg>
+Package pdftex.def Info: images/BSoverload.jpg  used on input line 475. on inpu
+t line 475.
+Package pdftex.def Info: Requested size: 321.33223pt x 142.26378pt on input lin
+e 475.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37 <./images/BSoverload.jpg>]
 Kapitel 9.
 
-Underfull \hbox (badness 10000) in paragraph at lines 546--547
+Underfull \hbox (badness 10000) in paragraph at lines 496--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 546--547
+Underfull \hbox (badness 10000) in paragraph at lines 496--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 546--547
+Underfull \hbox (badness 10000) in paragraph at lines 496--497
 
  []
 
-[36
+[38
 
 ]
 
@@ -844,160 +916,170 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[37] [38
+[39]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 15.04742pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[40]
+Kapitel 10.
+[41
+
+] [42
 
 ]
-Kapitel 10.
-<images/showDuplicates_hbla.jpg, id=146, 997.92825pt x 308.95425pt>
+Kapitel 11.
+<images/showDuplicates_hbla.jpg, id=166, 997.92825pt x 308.95425pt>
 File: images/showDuplicates_hbla.jpg Graphic file (type jpg)
 <use images/showDuplicates_hbla.jpg>
-Package pdftex.def Info: images/showDuplicates_hbla.jpg  used on input line 580
-. on input line 580.
+Package pdftex.def Info: images/showDuplicates_hbla.jpg  used on input line 534
+. on input line 534.
 Package pdftex.def Info: Requested size: 426.79134pt x 132.13116pt on input lin
-e 580.
-[39
+e 534.
 
- <./images/showDuplicates_hbla.jpg>]
-<images/msg_a.jpg, id=150, 997.92825pt x 309.5565pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[43
+
+]
+<images/msg_a.jpg, id=170, 997.92825pt x 309.5565pt>
 File: images/msg_a.jpg Graphic file (type jpg)
 <use images/msg_a.jpg>
-Package pdftex.def Info: images/msg_a.jpg  used on input line 595. on input lin
-e 595.
+Package pdftex.def Info: images/msg_a.jpg  used on input line 549. on input lin
+e 549.
 Package pdftex.def Info: Requested size: 426.79134pt x 132.38873pt on input lin
-e 595.
-<images/msg_new.jpg, id=151, 999.13275pt x 192.11775pt>
+e 549.
+<images/msg_new.jpg, id=171, 999.13275pt x 192.11775pt>
 File: images/msg_new.jpg Graphic file (type jpg)
 <use images/msg_new.jpg>
-Package pdftex.def Info: images/msg_new.jpg  used on input line 607. on input l
-ine 607.
+Package pdftex.def Info: images/msg_new.jpg  used on input line 561. on input l
+ine 561.
 Package pdftex.def Info: Requested size: 426.79134pt x 82.06377pt on input line
- 607.
+ 561.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 15.04742pt.
+ Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40 <./images/msg_a.jpg> <./images/msg_new.jpg>]
+[44 <./images/showDuplicates_hbla.jpg> <./images/msg_a.jpg>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 15.04742pt.
+ Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[41]
-Kapitel 11.
-
-LaTeX Warning: Citation `OS' undefined on input line 643.
-
-
-LaTeX Warning: Citation `OS' undefined on input line 646.
-
-
-LaTeX Warning: Citation `OS' undefined on input line 649.
-
-[42
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 659--660
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 671--672
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 700--702
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 15.04742pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[43]
-Underfull \hbox (badness 10000) in paragraph at lines 704--705
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 714--715
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 721--722
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 734--735
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 15.04742pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[44]
-Underfull \hbox (badness 10000) in paragraph at lines 749--750
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 767--769
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 777--778
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 787--788
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 15.04742pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[45]
-Underfull \hbox (badness 10000) in paragraph at lines 804--805
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 811--812
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 828--829
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 15.04742pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[46] [47
-
-]
+[45 <./images/msg_new.jpg>]
 Kapitel 12.
-[48
+
+LaTeX Warning: Citation `OS' undefined on input line 598.
+
+
+LaTeX Warning: Citation `OS' undefined on input line 601.
+
+[46
+
+]
+
+LaTeX Warning: Citation `OS' undefined on input line 604.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 614--615
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 616--617
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 618--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 622--623
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[47]
+Underfull \hbox (badness 10000) in paragraph at lines 624--625
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 626--627
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 628--629
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 630--631
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 632--634
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--636
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 639--640
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 641--642
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 643--644
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[48]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[49] [50
+
+]
+Kapitel 13.
+[51
 
 ]
 
@@ -1006,9 +1088,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[49]
-Kapitel 13.
-[50
+[52]
+Kapitel 14.
+[53
 
 ]
 
@@ -1017,51 +1099,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[51] [52
-
-]
-Kapitel 14.
-
-Underfull \hbox (badness 10000) in paragraph at lines 927--934
-
- []
-
-[53
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 946--947
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [54]
-Kapitel 15.
-[55
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 27.11469pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[55] [56
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1032--1033
+Kapitel 15.
+
+Underfull \hbox (badness 10000) in paragraph at lines 731--738
 
  []
 
+[57
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+]
+Underfull \hbox (badness 10000) in paragraph at lines 750--751
 
-[56]
+ []
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[57]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1069,35 +1129,70 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [58]
+Kapitel 16.
+
+Underfull \hbox (badness 10000) in paragraph at lines 772--773
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 776--777
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 779--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 782--783
+
+ []
+
+[59
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 784--785
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[60]
 No file disCount.bbl.
-[59] (disCount.lof)
+[61] (disCount.lof)
 \tf@lof=\write4
 \openout4 = `disCount.lof'.
 
- [60
+ [62
 
 ]
 
 pdfTeX warning: miktex-pdftex.exe (file ./images/begleitprotokoll.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/begleitprotokoll.pdf, id=219, pagebox=cropbox, 597.55246pt x 845.07724p
+<images/begleitprotokoll.pdf, id=232, pagebox=cropbox, 597.55246pt x 845.07724p
 t>
 File: images/begleitprotokoll.pdf Graphic file (type pdf)
 <use images/begleitprotokoll.pdf>
-Package pdftex.def Info: images/begleitprotokoll.pdf  used on input line 1090. 
-on input line 1090.
+Package pdftex.def Info: images/begleitprotokoll.pdf  used on input line 812. o
+n input line 812.
 Package pdftex.def Info: Requested size: 597.551pt x 845.07518pt on input line 
-1090.
+812.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./images/begleitprotokoll.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: images/begleitprotokoll.pdf Graphic file (type pdf)
 <use images/begleitprotokoll.pdf>
-Package pdftex.def Info: images/begleitprotokoll.pdf  used on input line 1090. 
-on input line 1090.
+Package pdftex.def Info: images/begleitprotokoll.pdf  used on input line 812. o
+n input line 812.
 Package pdftex.def Info: Requested size: 597.551pt x 845.07518pt on input line 
-1090.
+812.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./images/begleitprotokoll.pdf): PDF inc
@@ -1106,86 +1201,87 @@ lusion: found PDF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: miktex-pdftex.exe (file ./images/begleitprotokoll.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/begleitprotokoll.pdf, id=222, page=1, pagebox=cropbox, 597.55246pt x 84
+<images/begleitprotokoll.pdf, id=235, page=1, pagebox=cropbox, 597.55246pt x 84
 5.07724pt>
 File: images/begleitprotokoll.pdf Graphic file (type pdf)
 <use images/begleitprotokoll.pdf, page 1>
 Package pdftex.def Info: images/begleitprotokoll.pdf , page1 used on input line
- 1090. on input line 1090.
+ 812. on input line 812.
 Package pdftex.def Info: Requested size: 597.551pt x 845.07518pt on input line 
-1090.
+812.
 File: images/begleitprotokoll.pdf Graphic file (type pdf)
 <use images/begleitprotokoll.pdf, page 1>
 Package pdftex.def Info: images/begleitprotokoll.pdf , page1 used on input line
- 1090. on input line 1090.
+ 812. on input line 812.
 Package pdftex.def Info: Requested size: 597.57834pt x 845.11386pt on input lin
-e 1090.
+e 812.
 File: images/begleitprotokoll.pdf Graphic file (type pdf)
 <use images/begleitprotokoll.pdf, page 1>
 Package pdftex.def Info: images/begleitprotokoll.pdf , page1 used on input line
- 1090. on input line 1090.
+ 812. on input line 812.
 Package pdftex.def Info: Requested size: 597.57834pt x 845.11386pt on input lin
-e 1090.
+e 812.
 File: images/begleitprotokoll.pdf Graphic file (type pdf)
 <use images/begleitprotokoll.pdf, page 1>
 Package pdftex.def Info: images/begleitprotokoll.pdf , page1 used on input line
- 1090. on input line 1090.
+ 812. on input line 812.
 Package pdftex.def Info: Requested size: 597.57834pt x 845.11386pt on input lin
-e 1090.
+e 812.
 File: images/begleitprotokoll.pdf Graphic file (type pdf)
 <use images/begleitprotokoll.pdf, page 1>
 Package pdftex.def Info: images/begleitprotokoll.pdf , page1 used on input line
- 1090. on input line 1090.
+ 812. on input line 812.
 Package pdftex.def Info: Requested size: 597.57834pt x 845.11386pt on input lin
-e 1090.
-[61 <./images/begleitprotokoll.pdf>]
+e 812.
+[63 <./images/begleitprotokoll.pdf>]
 
 pdfTeX warning: miktex-pdftex.exe (file ./images/begleitprotokoll.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/begleitprotokoll.pdf, id=259, page=2, pagebox=cropbox, 597.55246pt x 84
+<images/begleitprotokoll.pdf, id=272, page=2, pagebox=cropbox, 597.55246pt x 84
 5.07724pt>
 File: images/begleitprotokoll.pdf Graphic file (type pdf)
 <use images/begleitprotokoll.pdf, page 2>
 Package pdftex.def Info: images/begleitprotokoll.pdf , page2 used on input line
- 1090. on input line 1090.
+ 812. on input line 812.
 Package pdftex.def Info: Requested size: 597.57834pt x 845.11386pt on input lin
-e 1090.
+e 812.
 File: images/begleitprotokoll.pdf Graphic file (type pdf)
 <use images/begleitprotokoll.pdf, page 2>
 Package pdftex.def Info: images/begleitprotokoll.pdf , page2 used on input line
- 1090. on input line 1090.
+ 812. on input line 812.
 Package pdftex.def Info: Requested size: 597.57834pt x 845.11386pt on input lin
-e 1090.
+e 812.
 File: images/begleitprotokoll.pdf Graphic file (type pdf)
 <use images/begleitprotokoll.pdf, page 2>
 Package pdftex.def Info: images/begleitprotokoll.pdf , page2 used on input line
- 1090. on input line 1090.
+ 812. on input line 812.
 Package pdftex.def Info: Requested size: 597.57834pt x 845.11386pt on input lin
-e 1090.
-[62 <./images/begleitprotokoll.pdf>]
+e 812.
+[64 <./images/begleitprotokoll.pdf>]
 Anhang A.
-<images/mvc_dc.jpg, id=263, 371.58826pt x 716.07526pt>
-File: images/mvc_dc.jpg Graphic file (type jpg)
-<use images/mvc_dc.jpg>
-Package pdftex.def Info: images/mvc_dc.jpg  used on input line 1099. on input l
-ine 1099.
-Package pdftex.def Info: Requested size: 265.76863pt x 512.1496pt on input line
- 1099.
-[63
+<images/mvc_dc.png, id=276, 2763.32375pt x 2906.86pt>
+File: images/mvc_dc.png Graphic file (type png)
+<use images/mvc_dc.png>
+Package pdftex.def Info: images/mvc_dc.png  used on input line 822. on input li
+ne 822.
+Package pdftex.def Info: Requested size: 432.73807pt x 455.24408pt on input lin
+e 822.
+[65
 
- <./images/mvc_dc.jpg>] (disCount.aux)
+ <./images/mvc_dc.png>] [66] [67] [68] [69] [70] [71] [72] [73]
+(disCount.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7818 strings out of 493312
- 104587 string characters out of 3138899
- 282484 words of memory out of 3000000
- 11186 multiletter control sequences out of 15000+200000
+ 7827 strings out of 493312
+ 104794 string characters out of 3138899
+ 278004 words of memory out of 3000000
+ 11193 multiletter control sequences out of 15000+200000
  19903 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,18n,46p,1787b,1665s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,18n,46p,1403b,1673s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Juwal\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 ecrm1000.pk> <C:\Users\Juwal\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
 ec\dpi600\ecrm0700.pk> <C:\Users\Juwal\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
@@ -1202,9 +1298,9 @@ r\jknappen\ec\dpi600\ecbx2488.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
 y10.pfb>
-Output written on disCount.pdf (64 pages, 1960838 bytes).
+Output written on disCount.pdf (74 pages, 2590608 bytes).
 PDF statistics:
- 790 PDF objects out of 1000 (max. 8388607)
+ 833 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
