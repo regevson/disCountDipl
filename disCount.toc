@@ -1,162 +1,162 @@
 \select@language {ngerman}
-\contentsline {part}{Eidesstattliche Erkl\IeC {\"a}rung}{4}
-\contentsline {part}{I\hspace {1em}Einleitung}{10}
-\contentsline {chapter}{\numberline {1}Ziel und Aufbau}{11}
-\contentsline {section}{\numberline {1.1}Ziel der Arbeit}{11}
-\contentsline {paragraph}{Bereits existierende Buchhaltungssoftware}{11}
-\contentsline {paragraph}{disCounts Ziele im Vergleich}{11}
-\contentsline {section}{\numberline {1.2}Aufbau der Arbeit}{12}
-\contentsline {part}{II\hspace {1em}Aufbau und angewandte Programmierkonzepte}{13}
-\contentsline {chapter}{\numberline {2}Objektorientierte Programmierkonzepte}{14}
-\contentsline {section}{\numberline {2.1}Model-View-Controller Design Pattern}{14}
-\contentsline {subsection}{\numberline {2.1.1}Definition}{14}
-\contentsline {subsection}{\numberline {2.1.2}View und Model}{14}
-\contentsline {subsection}{\numberline {2.1.3}Controller}{15}
-\contentsline {subsection}{\numberline {2.1.4}MouseListener}{15}
-\contentsline {subsection}{\numberline {2.1.5}Implementierung des MVC-Patterns in disCount}{15}
-\contentsline {section}{\numberline {2.2}Vererbung}{15}
-\contentsline {subsection}{\numberline {2.2.1}Definition}{15}
-\contentsline {subsection}{\numberline {2.2.2}Grund der Verwendung}{16}
-\contentsline {subsection}{\numberline {2.2.3}Vererbte Methoden und Verlauf}{16}
-\contentsline {chapter}{\numberline {3}Aufbau der Software}{17}
-\contentsline {section}{\numberline {3.1}Pakete und Klassen}{17}
-\contentsline {subsection}{\numberline {3.1.1}Rechnungswesenkapitel-Pakete}{17}
-\contentsline {subsection}{\numberline {3.1.2}Models}{17}
-\contentsline {subsection}{\numberline {3.1.3}Views f\IeC {\"u}r allgemeine Buchungss\IeC {\"a}tze}{17}
-\contentsline {subsection}{\numberline {3.1.4}Tabellenkalkulation}{17}
-\contentsline {part}{III\hspace {1em}Implementierung Buchungss\IeC {\"a}tze und Kalkulationen}{19}
-\contentsline {chapter}{\numberline {4}Grundwissen Rechnungswesen}{20}
-\contentsline {section}{\numberline {4.1}Buchungss\IeC {\"a}tze}{20}
-\contentsline {subsection}{\numberline {4.1.1}Aufbau und m\IeC {\"o}gliche Formen}{20}
-\contentsline {subsubsection}{Bestandskonten:}{21}
-\contentsline {subsubsection}{Erfolgskonten:}{21}
-\contentsline {subsubsection}{Steuern:}{21}
-\contentsline {subsection}{\numberline {4.1.2}Berechnung der Betr\IeC {\"a}ge}{21}
-\contentsline {section}{\numberline {4.2}Abschreibungen}{22}
-\contentsline {subsection}{\numberline {4.2.1}Ganzjahres- und halbjahres-AfA}{22}
-\contentsline {subsection}{\numberline {4.2.2}Erinnerungseuro}{22}
-\contentsline {section}{\numberline {4.3}Identit\IeC {\"a}tspreisverfahren}{23}
-\contentsline {chapter}{\numberline {5}Code-technische Umsetzung}{25}
-\contentsline {section}{\numberline {5.1}Grundformen der Buchungss\IeC {\"a}tze}{25}
-\contentsline {subsection}{\numberline {5.1.1}Einstufige Buchungss\IeC {\"a}tze}{25}
-\contentsline {subsection}{\numberline {5.1.2}Zweistufige Buchungss\IeC {\"a}tze}{25}
-\contentsline {subsection}{\numberline {5.1.3}Mehrstufige Buchungss\IeC {\"a}tze}{26}
-\contentsline {section}{\numberline {5.2}Ausnahmef\IeC {\"a}lle}{26}
-\contentsline {subsection}{\numberline {5.2.1}Methode f\IeC {\"u}r das Abschreiben}{26}
-\contentsline {subsubsection}{Code}{27}
-\contentsline {section}{\numberline {5.3}Kalkulationen}{27}
-\contentsline {subsection}{\numberline {5.3.1}Gehalts- und Lohnverrechnung}{27}
-\contentsline {chapter}{\numberline {6}Benutzeroberfl\IeC {\"a}che}{29}
-\contentsline {section}{\numberline {6.1}Hauptarbeitsfl\IeC {\"a}chen}{29}
-\contentsline {subsection}{\numberline {6.1.1}Men\IeC {\"u}}{29}
-\contentsline {subsubsection}{Einstellungen}{30}
-\contentsline {subsubsection}{Suchen}{30}
-\contentsline {section}{\numberline {6.2}Unterst\IeC {\"u}tzung kleiner Bildschirmaufl\IeC {\"o}sungen}{30}
-\contentsline {part}{IV\hspace {1em}Datenbank}{32}
-\contentsline {chapter}{\numberline {7}L\IeC {\"o}sungsvorschl\IeC {\"a}ge}{33}
-\contentsline {section}{\numberline {7.1}Zielsetzung}{33}
-\contentsline {section}{\numberline {7.2}Funktionsweise}{33}
-\contentsline {subsection}{\numberline {7.2.1}Datenbank}{33}
-\contentsline {subsection}{\numberline {7.2.2}Einsendung}{34}
-\contentsline {subsection}{\numberline {7.2.3}Abfrage}{34}
-\contentsline {subsection}{\numberline {7.2.4}Registrierung als LehrerIn}{34}
-\contentsline {chapter}{\numberline {8}Fehlerkorrektur}{35}
-\contentsline {section}{\numberline {8.1}Zielsetzung}{35}
-\contentsline {section}{\numberline {8.2}Fehlererkennung}{35}
-\contentsline {subsection}{\numberline {8.2.1}Fehlende Buchungss\IeC {\"a}tze}{35}
-\contentsline {subsubsection}{Problemstellung}{35}
-\contentsline {subsubsection}{L\IeC {\"o}sung}{36}
-\contentsline {subsection}{\numberline {8.2.2}Zu viele Buchungss\IeC {\"a}tze}{36}
-\contentsline {subsubsection}{L\IeC {\"o}sung}{37}
-\contentsline {chapter}{\numberline {9}Pr\IeC {\"u}fungen}{38}
-\contentsline {section}{\numberline {9.1}Ziel}{38}
-\contentsline {section}{\numberline {9.2}Umsetzung}{38}
-\contentsline {section}{\numberline {9.3}Funktionsweise Datenbank}{39}
-\contentsline {subsection}{\numberline {9.3.1}Struktur}{39}
-\contentsline {subsection}{\numberline {9.3.2}Verbindung zur Pr\IeC {\"u}fung}{39}
-\contentsline {subsection}{\numberline {9.3.3}Pr\IeC {\"u}fungsablauf}{39}
-\contentsline {subsection}{\numberline {9.3.4}Pr\IeC {\"u}fungsende, Ergebnis und Auswertung}{39}
-\contentsline {chapter}{\numberline {10}Verwaltung verschiedener Schulen}{41}
-\contentsline {part}{V\hspace {1em}disCount Verwaltungsprogramm}{42}
-\contentsline {chapter}{\numberline {11}Ziel und Befehle}{43}
-\contentsline {section}{\numberline {11.1}Ziel}{43}
-\contentsline {section}{\numberline {11.2}Befehle}{43}
-\contentsline {subsection}{\numberline {11.2.1}Redundanzen}{43}
-\contentsline {subsubsection}{showDuplicates -hbla}{43}
-\contentsline {subsubsection}{rm -hbla -a}{43}
-\contentsline {subsection}{\numberline {11.2.2}Nachrichten}{44}
-\contentsline {subsubsection}{msg -a}{44}
-\contentsline {subsubsection}{msg -no}{44}
-\contentsline {subsubsection}{msg -new}{45}
-\contentsline {subsubsection}{msg -yes}{45}
-\contentsline {subsubsection}{rm -msg -yes}{45}
-\contentsline {subsubsection}{rm -msg -all}{45}
-\contentsline {subsection}{\numberline {11.2.3}Sonstiges}{45}
-\contentsline {subsubsection}{clear und exit}{45}
-\contentsline {chapter}{\numberline {12}Aufbau und Implementierung der Funktionen}{46}
-\contentsline {subsection}{\numberline {12.0.1}Aufbau}{46}
-\contentsline {subsection}{\numberline {12.0.2}Prozesserzeugung in Linux}{46}
-\contentsline {subsubsection}{fork()}{46}
-\contentsline {subsubsection}{exec()}{47}
-\contentsline {subsubsection}{wait()}{47}
-\contentsline {subsection}{\numberline {12.0.3}Implementierung}{47}
-\contentsline {subsubsection}{Konsolenprogramm}{47}
-\contentsline {subsubsection}{Programm zum Anzeigen und L\IeC {\"o}schen von Redundanzen}{47}
-\contentsline {part}{VI\hspace {1em}Tabellenkalkulation}{50}
-\contentsline {chapter}{\numberline {13}Tabellen in JAVA}{51}
-\contentsline {section}{\numberline {13.1}Grundlagen}{51}
-\contentsline {subsection}{\numberline {13.1.1}Listener}{51}
-\contentsline {subsubsection}{MouseListener}{51}
-\contentsline {subsubsection}{TableModelListener}{51}
-\contentsline {section}{\numberline {13.2}Probleme mit dem JTable}{51}
-\contentsline {subsection}{\numberline {13.2.1}Renderer}{52}
-\contentsline {chapter}{\numberline {14}Unterschied zu anderen Programmen und implementierte Funktionen}{53}
-\contentsline {section}{\numberline {14.1}Unterschied}{53}
-\contentsline {section}{\numberline {14.2}Funktionen}{53}
-\contentsline {subsection}{\numberline {14.2.1}Arithmetische Operationen}{53}
-\contentsline {subsubsection}{Berechnung von arithmetischen Operationen in einer Zelle}{53}
-\contentsline {subsubsection}{Berechnung von arithmetischen Operationen zwischen verschiedenen Zellen}{54}
-\contentsline {subsubsection}{Berechnung des Produktes beziehungsweise der Summe durch das Markieren von Zellen}{54}
-\contentsline {subsubsection}{Erstellung von Abh\IeC {\"a}ngigkeiten, die auf \IeC {\"A}nderungen reagieren}{54}
-\contentsline {subsubsection}{Entstandenen Beziehungen werden durch Farben angezeigt}{55}
-\contentsline {part}{VII\hspace {1em}Speicherung und Dateiformat}{56}
-\contentsline {chapter}{\numberline {15}Encodierung}{57}
-\contentsline {section}{\numberline {15.1}\IeC {\"U}bersicht \IeC {\"u}ber den Ablauf}{57}
-\contentsline {section}{\numberline {15.2}Definition und Implementierung der Codierung}{57}
-\contentsline {subsection}{\numberline {15.2.1}Definition}{57}
-\contentsline {subsection}{\numberline {15.2.2}Implementierung}{58}
-\contentsline {subsubsection}{ohne Encodierung}{58}
-\contentsline {subsubsection}{mit Encodierung}{58}
-\contentsline {chapter}{\numberline {16}Decodierung}{59}
-\contentsline {section}{\numberline {16.1}Vorbereitung}{59}
-\contentsline {section}{\numberline {16.2}Umsetzung}{59}
-\contentsline {part}{Zusammenfassung}{61}
-\contentsline {part}{Literaturverzeichnis}{61}
-\contentsline {part}{Abbildungsverzeichnis}{62}
-\contentsline {part}{Anhang}{65}
-\contentsline {chapter}{\numberline {A}MVC-Umsetzung in disCount}{65}
-\contentsline {section}{\numberline {A.1}UML-Diagramm}{65}
-\contentsline {section}{\numberline {A.2}Abschreiben-Code}{66}
-\contentsline {subsection}{\numberline {A.2.1}}{66}
-\contentsline {subsection}{\numberline {A.2.2}}{66}
-\contentsline {subsection}{\numberline {A.2.3}}{66}
-\contentsline {section}{\numberline {A.3}Konsolenprogramm}{67}
-\contentsline {subsection}{\numberline {A.3.1}}{67}
-\contentsline {subsection}{\numberline {A.3.2}}{67}
-\contentsline {subsection}{\numberline {A.3.3}}{68}
-\contentsline {subsection}{\numberline {A.3.4}}{68}
-\contentsline {subsection}{\numberline {A.3.5}}{68}
-\contentsline {subsection}{\numberline {A.3.6}}{68}
-\contentsline {subsection}{\numberline {A.3.7}}{69}
-\contentsline {subsection}{\numberline {A.3.8}}{69}
-\contentsline {subsection}{\numberline {A.3.9}}{69}
-\contentsline {subsection}{\numberline {A.3.10}}{69}
-\contentsline {subsection}{\numberline {A.3.11}}{70}
-\contentsline {subsection}{\numberline {A.3.12}}{70}
-\contentsline {subsection}{\numberline {A.3.13}}{70}
-\contentsline {section}{\numberline {A.4}Decodierungs-Algorithmus}{70}
-\contentsline {subsection}{\numberline {A.4.1}}{70}
-\contentsline {subsection}{\numberline {A.4.2}}{71}
-\contentsline {subsection}{\numberline {A.4.3}}{71}
-\contentsline {subsection}{\numberline {A.4.4}}{71}
-\contentsline {subsection}{\numberline {A.4.5}}{72}
+\contentsline {part}{I\hspace {1em}Einleitung}{5}
+\contentsline {chapter}{\numberline {1}Ziel und Aufbau}{6}
+\contentsline {section}{\numberline {1.1}Ziel der Arbeit}{6}
+\contentsline {paragraph}{Bereits existierende Buchhaltungssoftware}{6}
+\contentsline {paragraph}{disCounts Ziele im Vergleich}{6}
+\contentsline {section}{\numberline {1.2}Aufbau der Arbeit}{7}
+\contentsline {part}{II\hspace {1em}Aufbau und angewandte Programmierkonzepte}{8}
+\contentsline {chapter}{\numberline {2}Objektorientierte Programmierkonzepte}{9}
+\contentsline {section}{\numberline {2.1}Model-View-Controller Design Pattern}{9}
+\contentsline {subsection}{\numberline {2.1.1}Definition}{9}
+\contentsline {subsection}{\numberline {2.1.2}View und Model}{9}
+\contentsline {subsection}{\numberline {2.1.3}Controller}{10}
+\contentsline {subsection}{\numberline {2.1.4}MouseListener}{10}
+\contentsline {subsection}{\numberline {2.1.5}Implementierung des MVC-Patterns in disCount}{10}
+\contentsline {section}{\numberline {2.2}Vererbung}{10}
+\contentsline {subsection}{\numberline {2.2.1}Definition}{10}
+\contentsline {subsection}{\numberline {2.2.2}Grund der Verwendung}{10}
+\contentsline {subsection}{\numberline {2.2.3}Vererbte Methoden und Verlauf}{11}
+\contentsline {chapter}{\numberline {3}Aufbau der Software}{12}
+\contentsline {section}{\numberline {3.1}Pakete und Klassen}{12}
+\contentsline {subsection}{\numberline {3.1.1}Rechnungswesen-Kapitel-Pakete}{12}
+\contentsline {subsection}{\numberline {3.1.2}Models}{12}
+\contentsline {subsection}{\numberline {3.1.3}Views f\IeC {\"u}r allgemeine Buchungss\IeC {\"a}tze}{12}
+\contentsline {subsection}{\numberline {3.1.4}Tabellenkalkulation}{12}
+\contentsline {part}{III\hspace {1em}Implementierung Buchungss\IeC {\"a}tze und Kalkulationen}{13}
+\contentsline {chapter}{\numberline {4}Grundwissen Rechnungswesen}{14}
+\contentsline {section}{\numberline {4.1}Buchungss\IeC {\"a}tze}{14}
+\contentsline {subsection}{\numberline {4.1.1}Aufbau und m\IeC {\"o}gliche Formen}{14}
+\contentsline {subsubsection}{Bestandskonten:}{15}
+\contentsline {subsubsection}{Erfolgskonten:}{15}
+\contentsline {subsubsection}{Steuern:}{15}
+\contentsline {subsection}{\numberline {4.1.2}Berechnung der Betr\IeC {\"a}ge}{15}
+\contentsline {section}{\numberline {4.2}Abschreibungen}{16}
+\contentsline {subsection}{\numberline {4.2.1}Ganzjahres- und halbjahres-AfA}{16}
+\contentsline {subsection}{\numberline {4.2.2}Erinnerungseuro}{16}
+\contentsline {section}{\numberline {4.3}Identit\IeC {\"a}tspreisverfahren}{17}
+\contentsline {chapter}{\numberline {5}Code-technische Umsetzung}{19}
+\contentsline {section}{\numberline {5.1}Grundformen der Buchungss\IeC {\"a}tze}{19}
+\contentsline {subsection}{\numberline {5.1.1}Einstufige Buchungss\IeC {\"a}tze}{19}
+\contentsline {subsection}{\numberline {5.1.2}Zweistufige Buchungss\IeC {\"a}tze}{19}
+\contentsline {subsection}{\numberline {5.1.3}Mehrstufige Buchungss\IeC {\"a}tze}{20}
+\contentsline {section}{\numberline {5.2}Ausnahmef\IeC {\"a}lle}{20}
+\contentsline {subsection}{\numberline {5.2.1}Methode f\IeC {\"u}r das Abschreiben}{20}
+\contentsline {subsubsection}{Code}{21}
+\contentsline {section}{\numberline {5.3}Kalkulationen}{21}
+\contentsline {subsection}{\numberline {5.3.1}Gehalts- und Lohnverrechnung}{21}
+\contentsline {chapter}{\numberline {6}Benutzeroberfl\IeC {\"a}che}{23}
+\contentsline {section}{\numberline {6.1}Hauptarbeitsfl\IeC {\"a}chen}{23}
+\contentsline {subsection}{\numberline {6.1.1}Men\IeC {\"u}}{24}
+\contentsline {subsubsection}{Einstellungen}{24}
+\contentsline {subsubsection}{Suchen}{25}
+\contentsline {section}{\numberline {6.2}Unterst\IeC {\"u}tzung kleiner Bildschirmaufl\IeC {\"o}sungen}{25}
+\contentsline {part}{IV\hspace {1em}Datenbank}{27}
+\contentsline {chapter}{\numberline {7}L\IeC {\"o}sungsvorschl\IeC {\"a}ge}{28}
+\contentsline {section}{\numberline {7.1}Zielsetzung}{28}
+\contentsline {section}{\numberline {7.2}Funktionsweise}{28}
+\contentsline {subsection}{\numberline {7.2.1}Datenbank}{28}
+\contentsline {subsection}{\numberline {7.2.2}Einsendung}{29}
+\contentsline {subsection}{\numberline {7.2.3}Abfrage}{29}
+\contentsline {subsection}{\numberline {7.2.4}Registrierung als LehrerIn}{29}
+\contentsline {chapter}{\numberline {8}Fehlerkorrektur}{30}
+\contentsline {section}{\numberline {8.1}Zielsetzung}{30}
+\contentsline {section}{\numberline {8.2}Fehlererkennung}{30}
+\contentsline {subsection}{\numberline {8.2.1}Fehlende Buchungss\IeC {\"a}tze}{30}
+\contentsline {subsubsection}{Problemstellung}{30}
+\contentsline {subsubsection}{L\IeC {\"o}sung}{31}
+\contentsline {subsection}{\numberline {8.2.2}Zu viele Buchungss\IeC {\"a}tze}{31}
+\contentsline {subsubsection}{L\IeC {\"o}sung}{32}
+\contentsline {chapter}{\numberline {9}Pr\IeC {\"u}fungen}{33}
+\contentsline {section}{\numberline {9.1}Ziel}{33}
+\contentsline {section}{\numberline {9.2}Umsetzung}{33}
+\contentsline {section}{\numberline {9.3}Funktionsweise Datenbank}{34}
+\contentsline {subsection}{\numberline {9.3.1}Struktur}{34}
+\contentsline {subsection}{\numberline {9.3.2}Verbindung zur Pr\IeC {\"u}fung}{34}
+\contentsline {subsection}{\numberline {9.3.3}Pr\IeC {\"u}fungsablauf}{34}
+\contentsline {subsection}{\numberline {9.3.4}Pr\IeC {\"u}fungsende, Ergebnis und Auswertung}{34}
+\contentsline {chapter}{\numberline {10}Verwaltung verschiedener Schulen}{36}
+\contentsline {part}{V\hspace {1em}disCount Verwaltungsprogramm}{37}
+\contentsline {chapter}{\numberline {11}Ziel und Befehle}{38}
+\contentsline {section}{\numberline {11.1}Ziel}{38}
+\contentsline {section}{\numberline {11.2}Befehle}{38}
+\contentsline {subsection}{\numberline {11.2.1}Redundanzen}{38}
+\contentsline {subsubsection}{showDuplicates -hbla}{38}
+\contentsline {subsubsection}{rm -hbla -a}{38}
+\contentsline {subsection}{\numberline {11.2.2}Nachrichten}{39}
+\contentsline {subsubsection}{msg -a}{39}
+\contentsline {subsubsection}{msg -no}{39}
+\contentsline {subsubsection}{msg -new}{40}
+\contentsline {subsubsection}{msg -yes}{40}
+\contentsline {subsubsection}{rm -msg -yes}{40}
+\contentsline {subsubsection}{rm -msg -all}{40}
+\contentsline {subsection}{\numberline {11.2.3}Sonstiges}{40}
+\contentsline {subsubsection}{clear und exit}{40}
+\contentsline {chapter}{\numberline {12}Aufbau und Implementierung der Funktionen}{41}
+\contentsline {subsection}{\numberline {12.0.1}Aufbau}{41}
+\contentsline {subsection}{\numberline {12.0.2}Prozesserzeugung in Linux}{41}
+\contentsline {subsubsection}{fork()}{41}
+\contentsline {subsubsection}{exec()}{42}
+\contentsline {subsubsection}{wait()}{42}
+\contentsline {subsection}{\numberline {12.0.3}Implementierung}{42}
+\contentsline {subsubsection}{Konsolenprogramm}{42}
+\contentsline {subsubsection}{Programm zum Anzeigen und L\IeC {\"o}schen von Redundanzen}{42}
+\contentsline {part}{VI\hspace {1em}Tabellenkalkulation}{45}
+\contentsline {chapter}{\numberline {13}Tabellen in JAVA}{46}
+\contentsline {section}{\numberline {13.1}Grundlagen}{46}
+\contentsline {subsection}{\numberline {13.1.1}Listener}{46}
+\contentsline {subsubsection}{MouseListener}{46}
+\contentsline {subsubsection}{TableModelListener}{46}
+\contentsline {section}{\numberline {13.2}Probleme mit dem JTable}{46}
+\contentsline {subsection}{\numberline {13.2.1}Renderer}{47}
+\contentsline {chapter}{\numberline {14}Unterschied zu anderen Programmen und implementierte Funktionen}{48}
+\contentsline {section}{\numberline {14.1}Unterschied}{48}
+\contentsline {section}{\numberline {14.2}Funktionen}{48}
+\contentsline {subsection}{\numberline {14.2.1}Arithmetische Operationen}{48}
+\contentsline {subsubsection}{Berechnung von arithmetischen Operationen in einer Zelle}{48}
+\contentsline {subsubsection}{Berechnung von arithmetischen Operationen zwischen verschiedenen Zellen}{49}
+\contentsline {subsubsection}{Berechnung des Produktes beziehungsweise der Summe durch das Markieren von Zellen}{49}
+\contentsline {subsubsection}{Erstellung von Abh\IeC {\"a}ngigkeiten, die auf \IeC {\"A}nderungen reagieren}{49}
+\contentsline {subsubsection}{Entstandene Beziehungen werden durch Farben angezeigt}{50}
+\contentsline {part}{VII\hspace {1em}Speicherung und Dateiformat}{51}
+\contentsline {chapter}{\numberline {15}Encodierung}{52}
+\contentsline {section}{\numberline {15.1}\IeC {\"U}bersicht \IeC {\"u}ber den Ablauf}{52}
+\contentsline {section}{\numberline {15.2}Definition und Implementierung der Codierung}{52}
+\contentsline {subsection}{\numberline {15.2.1}Definition}{52}
+\contentsline {subsection}{\numberline {15.2.2}Implementierung}{53}
+\contentsline {subsubsection}{ohne Encodierung}{53}
+\contentsline {subsubsection}{mit Encodierung}{53}
+\contentsline {chapter}{\numberline {16}Decodierung}{54}
+\contentsline {section}{\numberline {16.1}Vorbereitung}{54}
+\contentsline {section}{\numberline {16.2}Umsetzung}{54}
+\contentsline {part}{Zusammenfassung}{56}
+\contentsline {chapter}{Eidesstattliche Erkl\IeC {\"a}rung}{57}
+\contentsline {part}{Literaturverzeichnis}{58}
+\contentsline {part}{Abbildungsverzeichnis}{58}
+\contentsline {part}{Anhang}{62}
+\contentsline {chapter}{\numberline {A}MVC-Umsetzung in disCount}{62}
+\contentsline {section}{\numberline {A.1}UML-Diagramm}{62}
+\contentsline {section}{\numberline {A.2}Abschreiben-Code}{63}
+\contentsline {subsection}{\numberline {A.2.1}}{63}
+\contentsline {subsection}{\numberline {A.2.2}}{64}
+\contentsline {subsection}{\numberline {A.2.3}}{64}
+\contentsline {section}{\numberline {A.3}Konsolenprogramm}{65}
+\contentsline {subsection}{\numberline {A.3.1}}{65}
+\contentsline {subsection}{\numberline {A.3.2}}{65}
+\contentsline {subsection}{\numberline {A.3.3}}{65}
+\contentsline {subsection}{\numberline {A.3.4}}{66}
+\contentsline {subsection}{\numberline {A.3.5}}{66}
+\contentsline {subsection}{\numberline {A.3.6}}{66}
+\contentsline {subsection}{\numberline {A.3.7}}{66}
+\contentsline {subsection}{\numberline {A.3.8}}{67}
+\contentsline {subsection}{\numberline {A.3.9}}{67}
+\contentsline {subsection}{\numberline {A.3.10}}{67}
+\contentsline {subsection}{\numberline {A.3.11}}{67}
+\contentsline {subsection}{\numberline {A.3.12}}{68}
+\contentsline {subsection}{\numberline {A.3.13}}{68}
+\contentsline {section}{\numberline {A.4}Decodierungs-Algorithmus}{68}
+\contentsline {subsection}{\numberline {A.4.1}}{68}
+\contentsline {subsection}{\numberline {A.4.2}}{69}
+\contentsline {subsection}{\numberline {A.4.3}}{69}
+\contentsline {subsection}{\numberline {A.4.4}}{69}
+\contentsline {subsection}{\numberline {A.4.5}}{70}

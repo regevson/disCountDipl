@@ -6,10 +6,11 @@
 \usepackage[ngerman]{babel}
 \usepackage{pdfpages}
 \usepackage{listings}
-\usepackage[a4paper, total={6in, 10in}]{geometry}
+\usepackage[a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{amstext}
 \usepackage{amsmath}
+\usepackage{float}
 
 \usepackage{varioref}
 \usepackage{makeidx}
@@ -18,9 +19,10 @@
 \pagestyle{fancy}
 \fancyhf{}
 \makeatletter
-\setlength{\@fptop}{0pt}
+
 \makeatother
 \linespread{1.25}
+\renewcommand{\headrulewidth}{0pt}
 
   \begin{document}
   
@@ -32,7 +34,7 @@
 	\vspace{3cm}
 	{\huge \textbf{disCount}\par}
 	\vspace{0.5cm}
-	{\huge Ein Rechnungswesenprogramm für SchülerInnen}\par
+	{\huge Ein Rechnungswesen-Programm für SchülerInnen}\par
 			
 	\vspace{1.5cm}
 			
@@ -64,32 +66,27 @@
 \section*{Abstract}
 
 In order to allow students to improve their skills in some fields of accounting an accounting software called ,,disCount'' was created. It helps students operate more independently without being dependent on a teachers evaluation. Users can share their solutions and evaluate those of others.
-Therefore after finishing an exercise immediate feedback can be retrieved. This paper provides information about the structure and functionality of the program. Thus object oriented principles and their implementation and crucial functions are addressed.\\\\
+Therefore after finishing an exercise immediate feedback can be retrieved. This paper provides information about the structure and functionality of the program. Thus object oriented principles and their implementation and crucial functions are adressed.\\\\
 
-\noindent Damit sich SchülerInnen in einigen Feldern des Rechnungswesens verbessern können, wurde eine Software namens ,,disCount'' entwickelt. Das Programm hilft SchülerInnenn eigenständiger zu arbeiten, ohne dass sie auf die Kontrolle einer Lehrperson angewiesen sind. BenutzerInnen können ihre eigenen Lösungen teilen und die anderer bewerten. Deswegen kann nach der Fertigstellung einer Aufgabe sofortiges Feedback eingeholt werden. Diese Arbeit stellt Informationen über die Struktur und die Funktionalität des Programms zur Verfügung. So werden objektorientierte Konzepte, ihre Implementation und essenzielle Funktionen erläutert.
+\noindent Damit sich SchülerInnen in einigen Feldern des Rechnungswesens verbessern können, wurde eine Software namens ,,disCount'' entwickelt. Das Programm hilft SchülerInnen eigenständiger zu arbeiten, ohne dass sie auf die Kontrolle einer Lehrperson angewiesen sind. BenutzerInnen können ihre eigenen Lösungen teilen und die anderer bewerten. Deswegen kann nach der Fertigstellung einer Aufgabe sofortiges Feedback eingeholt werden. Diese Arbeit stellt Informationen über die Struktur und die Funktionalität des Programms zur Verfügung. So werden objektorientierte Konzepte, ihre Implementation und essenzielle Funktionen erläutert.
 
 \newpage
   
 \section*{Vorwort} 
   
-Da ich selbst an eine Schule gehe, an der das Rechnungswesen gelehrt wird konnte ich persönlich einige Stellen des Rechnungswesenunterrichts ausmachen, an welchen Verbesserung möglich und dringend nötig ist. Diese werde ich nun auflisten:\\
+Da ich selbst an eine Schule gehe, an der das Rechnungswesen gelehrt wird konnte ich persönlich einige Stellen des Rechnungswesen-Unterrichts ausmachen, an welchen Verbesserung möglich und dringend nötig ist. Diese werde ich nun auflisten:\\
 
-\noindent Bei jedem Buchungssatz muss die Steuer berechnet werden. Scheinbar eine Kleinigkeit, jedoch laut Rechnungswesenlehrern eine der häufigsten Fehlerquellen. Der Grund zum Fehler liegt dabei jedoch nicht an der fehlenden Kompetenz, sondern vielmehr am Zeitdruck und an der Konzentrationsabnahme mit der Zeit. Deshalb ist es unnötig in der Übungsphase die Steuer immer und immer wieder zu berechnen. Am besten wäre es, wenn die SchülerInnen selbst entscheiden könnten, ob sie die Steuer selbst berechnen oder es dem Computer überlassen.\\
+\noindent Bei jedem Buchungssatz muss die Steuer berechnet werden. Scheinbar eine Kleinigkeit, jedoch laut Rechnungswesen-LehrerInnen eine der häufigsten Fehlerquellen. Der Grund zum Fehler liegt dabei jedoch nicht an der fehlenden Kompetenz, sondern vielmehr am Zeitdruck und an der Konzentrationsabnahme mit der Zeit. Deshalb ist es unnötig, in der Übungsphase die Steuer immer und immer wieder zu berechnen. Am besten wäre es, wenn die SchülerInnen selbst entscheiden könnten, ob sie die Steuer selbst berechnen oder es dem Computer überlassen.\\
 
-\noindent Ein weiterer Kritikpunkt sind Kalkulationen. Diese werden mittlerweile in jedem Betrieb durch eine Software ausgearbeitet, in der Schule jedoch noch durch Hand berechnet. Der Fokus liegt dabei auf der Berechnung und nicht auf der Theorie. SchülerInnen wissen somit zwar wie man das Ergebnis berechnet, jedoch nicht warum es getan wird. Sinnvoller ist es, die Berechnung wie in der Arbeitswelt dem Computer zu überlassen und die Übungszeit zu nutzen, um den Sinn der Kalkulationen besser zu verstehen.\\
+\noindent Ein weiterer Kritikpunkt sind Kalkulationen. Diese werden mittlerweile in jedem Betrieb durch eine Software ausgearbeitet, in der Schule jedoch noch von Hand berechnet. Der Fokus liegt dabei auf der Berechnung und nicht auf der Theorie. SchülerInnen wissen somit zwar wie man das Ergebnis berechnet, jedoch nicht warum es getan wird. Sinnvoller ist es, die Berechnung wie in der Arbeitswelt dem Computer zu überlassen und die Übungszeit zu nutzen, um den Sinn der Kalkulationen besser zu verstehen.\\
 
-\noindent Ein großes Problem stellt die fehlende Austauschplattform dar. Anders als in der Mathematik, gibt es im Rechnungswesen keine Möglichkeit mit anderen über Aufgaben zu diskutieren und sich gegenseitig weiterzuhelfen. Hat man ein Problem, muss man in der Mitte der Aufgabe aufgeben und auf die nächste Rechnungswesen -Stunde warten, um eine Erklärung zu bekommen. Man sollte die Vorteile, welche das Internet für die Bildung geschaffen hat ausnutzen und es den SchülerInnen ermöglichen, sich mehrere unterschiedliche Erklärungen einzuholen und nicht erst in der nächsten Unterrichtsstunde, wo das Problem meistens schon wieder vergessen ist, sondern zu jenem Zeitpunkt, an dem es am dringendsten ist, nämlich beim Lösen der Aufgabe.\\
+\noindent Ein großes Problem stellt die fehlende Austauschplattform dar. Anders als in der Mathematik, gibt es im Rechnungswesen keine Möglichkeit, mit anderen über Aufgaben zu diskutieren und sich gegenseitig weiterzuhelfen. Hat man ein Problem, muss man in der Mitte der Aufgabe aufgeben und auf die nächste Rechnungswesen-Stunde warten, um eine Erklärung zu bekommen. Man sollte die Vorteile, welche das Internet für die Bildung geschaffen hat ausnutzen und es den SchülerInnen ermöglichen, sich mehrere unterschiedliche Erklärungen einzuholen und nicht erst in der nächsten Unterrichtsstunde, wo das Problem meistens schon wieder vergessen ist, sondern zu jenem Zeitpunkt, an dem es am dringendsten ist, nämlich beim Lösen der Aufgabe.\\
 
-\noindent Jedoch auch LehrerInnen werden durch den altmodischen Unterricht belastet. Wenn die Arbeit der SchülerInnen getan ist, beginnt jene der Lehrpersonen erst. Viele Studen verbringen sie mit der Korrektur der Arbeiten. So lange, dass es eigentlich unmöglich ist, noch eine genaue Auswertung der Ergebnisse vorzunehmen. Vor allem Lernzielkontrollen werden zum schnellen Einholen von Noten missbraucht und dienen selten dazu, wie es ihr Name eigentlich suggeriert, herauszufinden, ob das Lernziel erreicht wurde. Oft wird dazu einfach der Notendurchschnitt ermittelt und dadurch beurteilt, ob die SchülerInnen das Thema verstanden haben. Das ist jedoch viel zu ungenau. Jedes Thema beinhaltet mehrere unterschiedliche Buchungssätze und welche die SchülerInnen davon nun verstanden haben und welche nicht, kommt durch diese Methode nicht ans Licht. Um ein genaues Ergebnis zu erhalten, muss die Fehlerquote bei jedem Buchungssatz berechnet werden. Das ist jedoch unheimlich viel Arbeit und wird in der Praxis leider, jedoch verständlicherweise kaum gemacht.\\
+\noindent Jedoch auch LehrerInnen werden durch den altmodischen Unterricht belastet. Wenn die Arbeit der SchülerInnen getan ist, beginnt jene der Lehrpersonen erst. Viele Stunden verbringen sie mit der Korrektur der Arbeiten. So lange, dass es eigentlich unmöglich ist, noch eine genaue Auswertung der Ergebnisse vorzunehmen. Vor allem Lernzielkontrollen werden zum schnellen Einholen von Noten missbraucht und dienen selten dazu, wie es ihr Name eigentlich suggeriert, herauszufinden, ob das Lernziel erreicht wurde. Oft wird dazu einfach der Notendurchschnitt ermittelt und dadurch beurteilt, ob die SchülerInnen das Thema verstanden haben. Das ist jedoch viel zu ungenau. Jedes Thema beinhaltet mehrere unterschiedliche Buchungssätze und welche die SchülerInnen davon nun verstanden haben und welche nicht, kommt durch diese Methode nicht ans Licht. Um ein genaues Ergebnis zu erhalten, muss die Fehlerquote bei jedem Buchungssatz berechnet werden. Das ist jedoch unheimlich viel Arbeit und wird in der Praxis leider, jedoch verständlicherweise kaum gemacht.\\
 
-\noindent Werden diese Punkte umgesetzt, bleibt den SchülerInnen und LehrerInnen viel Frust erspart und die Freude am Rechnungswesen erhalten. Dazu bedarf es jedoch einer speziellen Software und diese wurde im Rahmen meiner Diplomarbeit entwickelt: disCount - Ein Rechnungswesenprogramm für SchülerInnen.
+\noindent Werden diese Punkte umgesetzt, bleibt den SchülerInnen und LehrerInnen viel Frust erspart und die Freude am Rechnungswesen erhalten. Dazu bedarf es jedoch einer speziellen Software und diese wurde im Rahmen meiner Diplomarbeit entwickelt: disCount - Ein Rechnungswesen-Programm für SchülerInnen.
   
-\newpage
   
-\addcontentsline{toc}{part}{Eidesstattliche Erklärung}
-
-\includepdf[pages=-]{images/eid.pdf}
-
 
   
 \tableofcontents
@@ -103,13 +100,14 @@ Da ich selbst an eine Schule gehe, an der das Rechnungswesen gelehrt wird konnte
 
   
 \chapter{Ziel und Aufbau}
-\rhead{KAPITEL 1.   ZIEL UND AUFBAU}
+\rhead{\thepage KAPITEL 1.   ZIEL UND AUFBAU}
+\lhead{\thepage}
 \section{Ziel der Arbeit}
 Ziel der Arbeit ist es, eine Rechnungswesen-Software namens ,,disCount'' zu entwickeln, durch welche es möglich ist, die Kritikpunkte aus dem Vorwort zu eliminieren.
 
 \paragraph{Bereits existierende Buchhaltungssoftware}  
 
-\noindent \\\\Im Internet ist zahlreiche Buchhaltungssoftware erhältlich. Am bekanntesten ist wohl das ,,BMD''-Programm (vgl. www.bmd.com). Dieses stellt zahlreiche Funktionen für alltägliche Buchungen in einem Unternehmen oder Kleinbetrieb zur Verfügung. So kann man beispielsweise Belege einlesen, Mahnungen schreiben oder eine Schnittstelle für die Steuerberaterin oder den Steuerberater einrichten. Durch die Fülle an Funktionen und Möglichkeiten ist das Programm jedoch, speziell für SchülerInnen, welche die meisten dieser Tools gar nicht verwenden müssen, schwer durchschaubar. Auch ist die Software für Personen, die lediglich die einfachsten Funktionen benutzen, mit 120 Euro sehr teuer.  \newline
+\noindent \\\\Im Internet ist zahlreiche Buchhaltungssoftware erhältlich. Am bekanntesten ist wohl das ,,BMD''-Programm (vgl. www.bmd.com). Dieses stellt zahlreiche Funktionen für alltägliche Buchungen in einem Unternehmen oder Kleinbetrieb zur Verfügung. So kann man beispielsweise Belege einlesen, Mahnungen schreiben oder eine Schnittstelle für den/die SteuerberaterIn einrichten. Durch die Fülle an Funktionen und Möglichkeiten ist das Programm jedoch, speziell für SchülerInnen, welche die meisten dieser Tools gar nicht verwenden müssen, schwer durchschaubar. Auch ist die Software für Personen, die lediglich die einfachsten Funktionen benutzen, mit 120 Euro sehr teuer.  \newline
 
 \paragraph{disCounts Ziele im Vergleich}  
 
@@ -129,21 +127,22 @@ Zuerst werde ich den Aufbau des Programms erklären und dabei das verwendete Ent
  
 \chapter{Objektorientierte Programmierkonzepte}
 \rhead{KAPITEL 2.   OBJEKTORIENTIERTE PROGRAMMIERKONZEPTE}
+\lhead{\thepage}
   
-Da disCount in JAVA geschrieben wurde, welche als objektorientierte Programmiersprache gilt, kommen einige nützliche objektorientierte Konzepte wie die Vererbung oder das MVC-Pattern in Frage, welche in disCount auch angewandt wurden und nun erklärt werden.
+Da disCount in JAVA geschrieben wurde, welche als objektorientierte Programmiersprache gilt, kommen einige nützliche objektorientierte Konzepte wie die Vererbung oder das MVC-Pattern infrage, welche in disCount auch angewandt wurden und nun erklärt werden.
   
   
 \section{Model-View-Controller Design Pattern}
  
 \subsection{Definition}
-MVC besteht aus drei Arten von Objekten. Das Modell ist das Anwendungsobjekt, die View ist seine Bildschirmdarstellung und der Controller definiert die Art und Weise, wie die Benutzeroberfläche auf Benutzereingaben reagiert. Vor MVC neigten Benutzeroberflächen-Designs dazu, diese Objekte zusammenzufassen. MVC entkoppelt sie, um die Flexibilität und Wiederverwendung zu erhöhen.
+MVC besteht aus drei Arten von Objekten. Das Modell ist das Anwendungsobjekt, die View ist seine Bildschirmdarstellung und der Controller definiert die Art und Weise, wie die Benutzeroberfläche auf Benutzereingaben reagiert. Vor MVC neigten Benutzeroberflächen-Designs dazu, diese Objekte zusammenzufassen. MVC entkoppelt sie, um die Flexibilität und Wiederverwendung zu erhöhen. (vgl. Gamma 2009,  S. 4\nocite{DPGOF})\\
 
 \subsection{View und Model}
-[...] Die View muss sicherstellen, dass ihr Aussehen den Zustand des Models widerspiegelt. Immer wenn sich die Daten im Model ändern, werden die abhängigen Views benachrichtigt. Diese aktualisieren sich dann dementsprechend. Mit diesem Ansatz können mehrere Views zu einem Modell hinzugefügt werden, um verschiedene Benutzeroberflächen bereitzustellen. Es können auch neue Views für ein Model erstellt werden, ohne es neu zu schreiben.(vgl. Gamma, 2009,  S. 4\nocite{DPGOF})\\
+[...] Die View muss sicherstellen, dass ihr Aussehen den Zustand des Models widerspiegelt. Immer wenn sich die Daten im Model ändern, werden die abhängigen Views benachrichtigt. Diese aktualisieren sich dann dementsprechend. Mit diesem Ansatz können mehrere Views zu einem Modell hinzugefügt werden, um verschiedene Benutzeroberflächen bereitzustellen. Es können auch neue Views für ein Model erstellt werden, ohne es neu zu schreiben. (vgl. Gamma 2009,  S. 4\nocite{DPGOF})\\
 
 \subsection{Controller}
-Das MVC-Pattern kapselt den Antwortmechanismus auf eine Aktion des/der BenutzerIn in ein Controller-Objekt ein. Eine Klassenhierarchie von Controllern macht es leicht, einen neuen Controller als eine Variation zu einem bestehenden zu erstellen.
-\noindent Eine View verwendet eine Instanz einer Controller-Unterklasse, um eine bestimmte Antwortstrategie zu implementieren. Um eine andere Strategie zu implementieren, ersetzt man einfach die Instanz durch eine andere Art von Controller. (vgl. Gamma, 2009, S. 5 f.\nocite{DPGOF})\\
+Das MVC-Pattern kapselt den Antwortmechanismus auf eine Aktion des Benutzers in ein Controller-Objekt ein. Eine Klassenhierarchie von Controllern macht es leicht, einen neuen Controller als eine Variation zu einem bestehenden zu erstellen.
+\noindent Eine View verwendet eine Instanz einer Controller-Unterklasse, um eine bestimmte Antwortstrategie zu implementieren. Um eine andere Strategie zu implementieren, ersetzt man einfach die Instanz durch eine andere Art von Controller. (vgl. Gamma 2009, S. 5 f.\nocite{DPGOF})\\
 
 \subsection{MouseListener}
 MouseListener warten auf eine Aktion des Users beispielsweise das Drücken auf einen Button und führen dann einen programmierten Code aus. Sie enthalten unter anderem die Methoden ,,mousePressed'' und ,,mouseEntered''. Deren Funktion folgt aus dem Namen.
@@ -156,9 +155,9 @@ In disCount wurde es ähnlich umgesetzt. Da ich jedoch finde, dass Controller ni
 \section{Vererbung} 
   
 \subsection{Definition}
-,,Die \textit{Vererbung} ermöglicht es einer Klasse, andere Klassen als  \textit{direkte Oberklassen} anzugeben und deren Variablen und Prozeduren nach festgelegten Regeln zu  \textit{erben}. Die Struktur der Oberklasse wird zu einer Teilstruktur der erbenden Klasse [...].'' (Kunz, 1995,  S. 24\nocite{Vererbung})
+,,Die \textit{Vererbung} ermöglicht es einer Klasse, andere Klassen als  \textit{direkte Oberklassen} anzugeben und deren Variablen und Prozeduren nach festgelegten Regeln zu  \textit{erben}. Die Struktur der Oberklasse wird zu einer Teilstruktur der erbenden Klasse [...].'' (Kunz 1995,  S. 24\nocite{Vererbung})
 \subsection{Grund der Verwendung}
-In meinem Programm, werden bei vielen GUIs die gleichen Elemente gebraucht. Beispielsweise braucht jedes Eingabefenster eine Überschrift, ein JLabel\footnote{statischer Schriftzug}, ein Textfeld und natürlich einen Button zum Bestätigen. Um nicht jedes mal den selben Code, zum Erzeugen dieser Komponenten zu schreiben und um doppelten Code zu verhindern, wurde eine Oberklasse erstellt, von der jede einzelne View-Klasse erbt. 
+In meinem Programm, werden bei vielen GUIs die gleichen Elemente gebraucht. Beispielsweise braucht jedes Eingabefenster eine Überschrift, ein JLabel\footnote{statischer Schriftzug}, ein Textfeld und natürlich einen Button zum Bestätigen. Um nicht jedes Mal denselben Code zum Erzeugen dieser Komponenten zu schreiben und um doppelten Code zu verhindern, wurde eine Oberklasse erstellt, von der jede einzelne View-Klasse erbt. 
 
 \subsection{Vererbte Methoden und Verlauf}
 
@@ -170,31 +169,32 @@ Diese Methode wird vom MouseListener aufgerufen. Sie erzeugt das Fenster, die Ü
 \begin{lstlisting}
 public void build(String Konto1, String[] Konten2, String Konto3, boolean fixed);
 \end{lstlisting}
-Die erbende Klasse überschreibt diese Methode dann und fügt die benötigten Design-Komponenten hinzu. Sobald der User die Daten eingegeben hat und auf den Bestätigungs-Button gedrückt hat, wird eine Methode namens ,,setUpRoutine'' aufgerufen, die dann die Daten weiter verarbeitet und ausgibt.
+Die erbende Klasse überschreibt diese Methode dann und fügt die benötigten Design-Komponenten hinzu. Sobald der User die Daten eingegeben hat und auf den Bestätigungs-Button gedrückt hat, wird eine Methode namens ,,setUpRoutine'' aufgerufen, die dann die Daten weiterverarbeitet und ausgibt.
 
 
 \chapter{Aufbau der Software}
+\lhead{\thepage}
 \rhead{KAPITEL 3.   AUFBAU DER SOFTWARE}
 
 \section{Pakete und Klassen} 
   
   
 
-\subsection{Rechnungswesenkapitel-Pakete}
-Um die einzelnen Themengebiete von einander abzugrenzen, wurde entschieden, für jedes Thema ein eigenes Paket anzulegen. Dies enthält dann die View, Controller -und MouseListener-Klassen. Die Anzahl ersterer hängt von der Unterschiedlichkeit der Benutzeroberfläche ab, welche die Berechnungen des Kapitels aufweisen.
+\subsection{Rechnungswesen-Kapitel-Pakete}
+Um die einzelnen Themengebiete voneinander abzugrenzen, wurde entschieden, für jedes Thema ein eigenes Paket anzulegen. Dieses enthält dann die View-, Controller- und MouseListener-Klassen.
 
 \subsection{Models}
-Da sich viele Rechnungswesen-Kapitel auf das gleiche System stützen, was die Berechnung anbelangt, gibt es nur ein ,,Haupt-Model''.
+Da sich viele Rechnungswesen-Kapitel auf das gleiche System stützen was die Berechnung anbelangt, gibt es nur ein ,,Haupt-Model''.
   
 
   
 \subsection{Views für allgemeine Buchungssätze}
 
-Buchungssätze können nur in fünf Grundformen vorkommen, siehe Abbildung 4.1. Da die Benutzeroberfläche aufgrund der unterschiedlichen Anzahl an Konten auch zusätzliche Eingabemöglichkeiten für Preise oder andere Zusatzinformation fordert, sind die Views verschieden und deshalb in eigenen Klassen. 
-Diese werden alle im Paket ,,extraViews'' zusammengefasst. Auch gibt es dort Klassen, welche für den Splash Screen\footnote{Beim Start des Programms wird auf dem ,,Splash Screen'' kurz das Logo eingeblendet.} oder das Setup-Fenster verantwortlich sind. Auf diese wird aber in dieser Arbeit nicht weiter eingegangen.
+Buchungssätze können nur in fünf Grundformen vorkommen (siehe Abbildung 4.1). Da die Benutzeroberfläche aufgrund der unterschiedlichen Anzahl an Konten auch zusätzliche Eingabemöglichkeiten für Preise oder andere Zusatzinformation fordert, sind die Views verschieden und deshalb in eigenen Klassen. 
+Diese werden alle im Paket ,,extraViews'' zusammengefasst. Auch gibt es dort Klassen, welche für den Splash Screen\footnote{Beim Start des Programms wird auf dem ,,Splash Screen'' kurz das Logo eingeblendet.} oder das Setup-Fenster verantwortlich sind.
 
 \subsection{Tabellenkalkulation}
-Da die Tabellenkalkulation eine komplett andere Ansicht verwendet, unterschiedliche Algorithmen benötigt und eigentlich ein unabhängiges Unterprogramm bildet, wurde dafür ein neuer Controller, eine neue View und ein neues Model angelegt. Nur der Controller der Tabellenkalkulation ist mit der ,,Außenwelt'' verbunden.
+Da die Tabellenkalkulation eine komplett andere Ansicht verwendet, unterschiedliche Algorithmen benötigt und eigentlich ein autonomes Unterprogramm bildet, wurde dafür ein neuer Controller, eine neue View und ein neues Model angelegt. Nur der Controller der Tabellenkalkulation ist mit der ,,Außenwelt'' verbunden.
 
 
 
@@ -212,6 +212,7 @@ Da die Tabellenkalkulation eine komplett andere Ansicht verwendet, unterschiedli
  
  
 \chapter{Grundwissen Rechnungswesen}
+\lhead{\thepage}
 \rhead{KAPITEL 4.   GRUNDWISSEN RECHNUNGSWESEN}
 In diesem Kapitel werden grundlegende Konzepte des Rechnungswesens vermittelt, damit ein ausreichendes Vorwissen für Kapitel 5 gewonnen wird, in welchem diese Konzepte als Algorithmen im Programm implementiert werden.
  
@@ -302,15 +303,16 @@ Dann wird der Anfangsbestand vom Bilanzansatz (Endbestand) subtrahiert, um die B
  
  
 \chapter{Code-technische Umsetzung}
+\lhead{\thepage}
 \rhead{KAPITEL 5.  CODE-TECHNISCHE UMSETZUNG}
   
 Folgende Funktionen befinden sich im Paket Model in der Klasse MainModel.
  
 \section{Grundformen der Buchungssätze}
-Wie im Rechnungswesen-Abschnitt schon erklärt wurde, kommen Buchungssätze grundsätzlich in drei Grundformen vor. Hierbei wird die Umkehrung nicht mit einberechnet. Jede dieser Formen erfordert aufgrund der unterschiedlichen Berechnung eine gesonderte Behandlung.
+Wie im Rechnungswesen-Abschnitt schon erklärt wurde, kommen Buchungssätze grundsätzlich in drei Grundformen vor. Hierbei wird die Umkehrung nicht mit eingerechnet. Jede dieser Formen erfordert aufgrund der unterschiedlichen Berechnung eine gesonderte Behandlung.
  
 \subsection{Einstufige Buchungssätze}
-Diese können am einfachsten gehandhabt werden. Die Konten sind auf einer Ebene, genau so wie der Preis. Bei der Umkehrung müssen nur die beiden Konten vertauscht werden, wobei der Preis an Ort und Stelle bleibt. Zudem muss nur von netto auf brutto und umgekehrt gerechnet werden. Dies wird durch folgende Funktion implementiert.
+Diese können am einfachsten gehandhabt werden. Die Konten sind auf einer Ebene, genauso wie der Preis. Bei der Umkehrung müssen nur die beiden Konten vertauscht werden, wobei der Preis an Ort und Stelle bleibt. Zudem muss nur von netto auf brutto und umgekehrt gerechnet werden. Dies wird durch folgende Funktion implementiert.
  
  
 \begin{lstlisting}
@@ -323,7 +325,7 @@ nettoToBrutto(String percent, String price)
 Diese Form bringt ein zusätzliches Konto mit sich, nämlich die Steuer. So muss diese jetzt auch immer ausgerechnet werden. Das führt vermehrt zu Rundungsfehlern, welche in einer separaten Methode möglichst klein gehalten werden. Auch verändert sich das Konto bei der Umkehrung. 
 
 \subsection{Mehrstufige Buchungssätze}
-Ein neues Konto, das nicht, wie bei der Steuer, eindeutig festgelegt ist, ergänzt die bisher verwendeten Konten. So muss nun eine neue Komponente, ein Textfeld, in die Benutzeroberfläche eingebaut werden, um es dem User zu ermöglichen, selbstständig Werte einzugeben. Neben dem Feld für den Preis, gibt es nun auch ein Feld für den Betrag des Extrakontos. Um den Bruttobetrag zu berechnen, muss jetzt der Betrag des ersten Aufwandskontos zu dem des zweiten addiert und davon 20 Prozent ausgerechnet werden. Diese werden dann zur Summe addiert und dieser Betrag ergibt dann den Bruttobetrag. Die Berechnung der anderen Beträge, können vom Leser selbst erschlossen werden.
+Ein neues Konto, das nicht wie bei der Steuer eindeutig festgelegt ist, ergänzt die bisher verwendeten Konten. So muss nun eine neue Komponente, ein Textfeld, in die Benutzeroberfläche eingebaut werden, um es dem User zu ermöglichen, selbstständig Werte einzugeben. Neben dem Feld für den Preis, gibt es nun auch ein Feld für den Betrag des Extrakontos. Um den Bruttobetrag zu berechnen, muss jetzt der Betrag des ersten Aufwandskontos zu dem des zweiten addiert und davon 20 Prozent ausgerechnet werden. Diese werden dann zur Summe addiert und dieser Betrag ergibt dann den Bruttobetrag. Die Berechnung der anderen Beträge kann vom Leser selbst erschlossen werden.
 
 \begin{lstlisting}
 Double[] nettoToBrutto(String nettoPrice, String otherPrice, String percent)
@@ -332,7 +334,7 @@ Double[] nettoToBrutto(String nettoPrice, String otherPrice, String percent)
 \noindent Auch hier gibt es wieder eine Version, die von brutto auf netto rechnet.
 
 \section{Ausnahmefälle}
-Die Ausnahmefälle sind wie immer diejenigen, welche am schwierigsten zu behandeln sind. Sie lassen sich grundsätzlich auf die Grundformen zurückführen, jedoch erfordern die kleinen Veränderungen oft neue GUI-Elemente und Algorithmen. Besonders Themen wie die Berechnung des Tagesgeldes oder das Abschreiben, erfordern neue Lösungen und komplett andere Benutzeroberflächen, wegen der zusätzlichen Parameter, die zur Berechnung benötigt werden. Auf letztere wird nun gesondert eingegangen.
+Die Ausnahmefälle sind wie immer diejenigen, welche am schwierigsten zu behandeln sind. Sie lassen sich grundsätzlich auf die Grundformen zurückführen, jedoch erfordern die kleinen Veränderungen oft neue GUI-Elemente und Algorithmen. Besonders Themen wie die Berechnung des Tagesgeldes oder das Abschreiben erfordern neue Lösungen und komplett andere Benutzeroberflächen wegen der zusätzlichen Parameter, die zur Berechnung benötigt werden. Auf letztere wird nun gesondert eingegangen.
 
 
 \subsection{Methode für das Abschreiben}
@@ -354,15 +356,16 @@ Es finden einige Typ-Umwandlungen statt und der AfA-Betrag wird standardmäßig 
 
 
 
-\noindent Anschließend werden in einer Schleife die Daten inkrementiert und der AfA-Betrag, der bei einer ganzjahres-AfA immer gleich bleibt, zu den zwei Listen hinzugefügt.  Da im letzten Abschreibungsjahr ein ,,Erinnerungseuro'' übrig bleibt, wird der AfA-Betrag - 1 hinzugefügt. Da eine halbjahres-AfA bis auf den ersten und letzten Betrag und der Länge identisch zu einer g.j-AfA ist. Wurde zuerst der Prozess der g.j.-AfA vollzogen. Jetzt wird überprüft, ob es sich um eine h.j.-AfA handelt. Wenn ja, wird der erste Betrag standardmäßig halbiert und der momentan letzte Betrag, der ja vorher wegen dem Erinnerungseuro - 1 genommen wurde, inkrementiert. Dann wird ein weiterer Eintrag hinzugefügt, der nun der letzte Betrag ist und deshalb halbiert und dekrementiert werden muss. Der AfA-Betrag einer h.j.-AfA wird für weitere Berechnungen angepasst. (siehe A.2.2)\\
+\noindent Anschließend werden in einer Schleife die Daten inkrementiert und der AfA-Betrag, der bei einer ganzjahres-AfA immer gleich bleibt, zu den zwei Listen hinzugefügt.  Da im letzten Abschreibungsjahr ein ,,Erinnerungseuro'' übrig bleibt, wird der AfA-Betrag - 1 hinzugefügt. Da eine halbjahres-AfA bis auf den ersten und letzten Betrag und der Länge identisch zu einer g.j-AfA ist, wurde zuerst der Prozess der g.j.-AfA vollzogen. Jetzt wird überprüft, ob es sich um eine h.j.-AfA handelt. Wenn ja, wird der erste Betrag standardmäßig halbiert und der momentan letzte Betrag, der ja vorher wegen dem Erinnerungseuro - 1 genommen wurde, inkrementiert. Dann wird ein weiterer Eintrag hinzugefügt, der nun der letzte Betrag ist und deshalb halbiert und dekrementiert werden muss. Der AfA-Betrag einer h.j.-AfA wird für weitere Berechnungen angepasst. (siehe A.2.2)\\
 	
 
 \noindent Nun wird auf Grundlage des commands entschieden, wie viele ausgegebene Abschreibungen vom User erwünscht sind. Diese werden dann aus den Listen herausgefiltert und mittels der Methode ,,addAfAToPanel'' auf der Benutzeroberfläche abgebildet. (siehe A.2.3)
   
 \section{Kalkulationen}
-Kalkulationen sind die einfachsten und vorhersehbarsten Berechnungen im Programm. Sie folgen immer dem gleichen Schema und deshalb muss, anders als bei den Buchungssätzen, verhältnismäßig wenig Code für Abweichungen geschrieben werden. Es gibt jedoch auch hier eine Umkehrung, die gesondert behandelt werden muss. Es gibt außerdem eine Funktion, die einen gewissen Grad an Multitasking erlaubt. Ist man mit einer Kalkulation noch nicht fertig oder will man sie derzeit nicht löschen, klickt man einfach eine andere an. Im Menü ,,Kalkulationen'' erscheint dann die Anzahl der offenen Kalkulationen. Wechselt man wieder zur alten, kann man diese löschen und der Counter wird dekrementiert. So ist man nicht auf eine beschränkt.
+Kalkulationen sind die einfachsten und vorhersehbarsten Berechnungen im Programm. Sie folgen immer dem gleichen Schema und deshalb muss, anders als bei den Buchungssätzen, verhältnismäßig wenig Code für Abweichungen geschrieben werden. Es gibt jedoch auch hier eine Umkehrung, die gesondert behandelt werden muss. Es gibt außerdem eine Funktion, die einen gewissen Grad an Multitasking erlaubt. Ist man mit einer Kalkulation noch nicht fertig oder will man sie derzeit nicht löschen, klickt man einfach eine andere an. Im Menü ,,Kalkulationen'' erscheint dann die Anzahl der offenen Kalkulationen. Wechselt man wieder zur alten, kann man diese löschen und der Counter wird dekrementiert. So ist man nicht auf eine Kalkulation beschränkt.
+
 \subsection{Gehalts- und Lohnverrechnung}
-Eine weitere Kalkulation, die einem festgelegten Schema folgt. Sie unterscheidet sich jedoch von den anderen Kalkulationen, aufgrund der regelmäßigen Veränderungen, bezüglich der Prozentsätze. Diese ändern sich jährlich und deshalb wurde eine Funktion eingebaut, die es dem Nutzer erlaubt, selbstständig die Daten auf dem neuesten Stand zu halten. Diese werden extern in einer Textdatei gespeichert und ein- beziehungsweise ausgelesen. Außerdem wird der User aufgefordert, selbst Daten aus einer Tabelle herauszulesen, um die Implementation dieser vorzubeugen.
+Eine weitere Kalkulation, die einem festgelegten Schema folgt. Sie unterscheidet sich jedoch von den anderen Kalkulationen aufgrund der regelmäßigen Veränderungen bezüglich der Prozentsätze. Diese ändern sich jährlich und deshalb wurde eine Funktion eingebaut, die es dem Nutzer erlaubt, selbstständig die Daten auf dem neuesten Stand zu halten. Diese werden extern in einer Textdatei gespeichert und ein- beziehungsweise ausgelesen. Außerdem wird der User aufgefordert, selbst Daten aus einer Tabelle herauszulesen, um die Implementation dieser vorzubeugen.
 
 
 
@@ -370,13 +373,14 @@ Eine weitere Kalkulation, die einem festgelegten Schema folgt. Sie unterscheidet
 
 \chapter{Benutzeroberfläche}
 \rhead{KAPITEL 6.  BENUTZEROBERFLÄCHE}
+\lhead{\thepage}
  
-In diesem Kapitel werden die einzelnen Ansichten und die, vom User sichtbaren, Komponenten und Funktionen erklärt.
+In diesem Kapitel werden die einzelnen Ansichten und die vom User sichtbaren Komponenten und Funktionen erklärt.
  
 \section{Hauptarbeitsflächen}
-Die Buchungssatz- und Kalkulationsansicht des Programms besteht grundsätzlich aus drei Hauptarbeitsflächen. Auf der linken Seite befindet sich das Hauptmenü. Dort sind untereinander alle aufgegriffenen Kapitel angeordnet. Nachdem eines angeklickt wurde öffnet sich eine weitere Auflistung in der Mitte. Dort sind dann alle Buchungssätze oder Kalkulationen, die im Kapitel vorkommen zu finden. Nach der Auswahl eines dieser öffnet sich das erste Fenster, in welchem eine kleine Vorschau des Buchungssatzes und Eingabefelder für den Benutzer erscheinen. Wird der Bestätigen-Button gedrückt, wird der fertig ausgerechnete Buchungssatz auf der Hauptarbeitsfläche auf der rechten Seite abgebildet. Da die Lösung einer Kalkulation viel mehr Platz beansprucht, wird diese auf der Arbeitsfläche in der Mitte ausgegeben. Gleichzeitig erscheint beim Kapitel ,,Kalkulationen'' die Zahl der aktiven Kalkulationen. Wird eine weitere geöffnet inkrementiert auch diese Zahl.
+Die Buchungssatz- und Kalkulationsansicht des Programms besteht grundsätzlich aus drei Hauptarbeitsflächen. Auf der linken Seite befindet sich das Hauptmenü. Dort sind untereinander alle aufgegriffenen Kapitel angeordnet. Nachdem eines angeklickt wurde, öffnet sich eine weitere Auflistung in der Mitte. Dort sind dann alle Buchungssätze oder Kalkulationen, die im Kapitel vorkommen zu finden. Nach der Auswahl eines dieser, öffnet sich das erste Fenster, in welchem eine kleine Vorschau des Buchungssatzes und Eingabefelder für den Benutzer erscheinen. Wird der Bestätigen-Button gedrückt, wird der fertig ausgerechnete Buchungssatz auf der Hauptarbeitsfläche auf der rechten Seite abgebildet. Da die Lösung einer Kalkulation viel mehr Platz beansprucht, wird diese auf der Arbeitsfläche in der Mitte ausgegeben. Gleichzeitig erscheint beim Kapitel ,,Kalkulationen'' die Zahl der aktiven Kalkulationen. Wird eine weitere geöffnet, inkrementiert auch diese Zahl.
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[height=7cm]{images/hauptarbeitsflaechen}
 	\caption[Hauptarbeitsflächen]{Die drei Hauptarbeitsflächen in disCount.}
@@ -384,59 +388,62 @@ Die Buchungssatz- und Kalkulationsansicht des Programms besteht grundsätzlich a
 
 
 \subsection{Menü}
-Wie bei den meisten Programmen ist das Menü ganz oben angeordnet. Es enthält die Registerkarten ,,Datei'', ,,Löschen'', ,,Abschreiben'', ,,Einstellungen'' und ,,Suchen''. Viele dieser Funktionen sind auch durch Shortcuts erreichbar. Die meisten Funktionen, die im Menü enthalten sind, sind selbsterklärend und deshalb werden wir nur auf die zwei wichtigsten eingehen. Die Kategorie ,,Abschreiben'', wird im Zuge des Erläuterns der elementare Funktionen behandelt.
+Wie bei den meisten Programmen ist das Menü ganz oben angeordnet. Es enthält die Registerkarten ,,Datei'', ,,Löschen'', ,,Abschreiben'', ,,Einstellungen'' und ,,Suchen''. Viele dieser Funktionen sind auch durch Shortcuts erreichbar. Die meisten Funktionen, die im Menü enthalten sind, sind selbsterklärend und deshalb werden wir nur auf die zwei wichtigsten eingehen. Die Kategorie ,,Abschreiben'' wird im Zuge des Erläuterns der elementaren Funktionen behandelt.
 
 \subsubsection{Einstellungen}
-Das Untermenü dieser Registerkarte enthält Funktionen zum Ändern der Grundeinstellung der Personalverrechnung. Da sich dort die Prozentsätze jährlich ändern und ,,disCount'' keine Updates unterstützt, kann man in dem Einstellungsmenü selbstständig diese Daten ändern.
+Das Untermenü dieser Registerkarte enthält Funktionen zum Ändern der Grundeinstellung der Personalverrechnung. Da sich dort die Prozentsätze jährlich ändern, kann man in dem Einstellungsmenü selbstständig diese Daten ändern.
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[height=13cm]{images/einstellungen}
 	\caption[Einstellungen]{Grundeinstellung der Personalverrechnung.}
 \end{figure}
 
 \subsubsection{Suchen}
-Damit der Benutzer so schnell wie möglich zum gewünschten Buchungssatz kommt, gibt es die Suchfunktion. Das Suchfenster besteht aus einer Suchleiste und einem Bereich, in welchem die Ergebnisse angezeigt werden. Abgesehen vom Namen des Buchungssatzes, wird auch der Pfad angezeigt. Im Kapitel !!! wird die Suchfunktion genauer erläutert.
+Damit der/die BenutzerIn so schnell wie möglich zum gewünschten Buchungssatz kommt, gibt es die Suchfunktion. Das Suchfenster besteht aus einer Suchleiste und einem Bereich, in welchem die Ergebnisse angezeigt werden. Abgesehen vom Namen des Buchungssatzes, wird auch der Pfad angezeigt.
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=16cm]{images/suchen}
 	\caption[Suchen]{Suchen in disCount.}
 \end{figure}
 
 \section{Unterstützung kleiner Bildschirmauflösungen}
-Im Programm wird das in JAVA eingebaute ,,BorderLayout'' verwendet. Dieses besteht aus einer Nord-, Ost-, Süd- und Westseite, die auch bis auf die Nordseite benutzt werden. Ein tolle Funktion vom BorderLayout ist, dass es sich beim Verkleinern des Fensters automatisch anpasst. Speziell bei den Kalkulationen verdeckt das Ostpanel aber schnell den Inhalt. Deshalb kann man durch ein Wischen über ein Viereck auf dem Ostpanel, dieses einklappen, um einen größeren Arbeitsbereich zu erhalten. Es wurde auch eine Funktion für schnelles Suchen eingebaut. Dazu gibt es am unteren Rand des mittleren Panels eine weiße Leiste, die beim Darüberstreichen die Suche ausklappt und wieder einklappt.
+Im Programm wird das in JAVA eingebaute ,,BorderLayout'' verwendet. Dieses besteht aus einer Nord-, Ost-, Süd- und Westseite, die auch bis auf die Nordseite benutzt werden. Eine tolle Funktion vom BorderLayout ist, dass es sich beim Verkleinern des Fensters automatisch anpasst. Speziell bei den Kalkulationen verdeckt das Ostpanel aber schnell den Inhalt. Deshalb kann man durch ein Wischen über ein Viereck auf dem Ostpanel dieses einklappen, um einen größeren Arbeitsbereich zu erhalten. Es wurde auch eine Funktion für schnelles Suchen eingebaut. Dazu gibt es am unteren Rand des mittleren Panels eine weiße Leiste, die beim Darüberstreichen die Suche ausklappt und wieder einklappt.
 
 
 \part{Datenbank}
 
 
 \chapter{Lösungsvorschläge}
-\rhead{KAPITEL 8.  LÖSUNGSVORSCHLÄGE}
+\rhead{KAPITEL 7.  LÖSUNGSVORSCHLÄGE}
+\lhead{\thepage}
  
 Richtige Lösungen sind für effizientes Üben sehr wichtig. Auch können Sie sehr hilfreich sein, wenn man einmal nicht weiterkommt. Deshalb wurde ein System entwickelt, das bei Bedarf einen möglichen Lösungsweg vorschlägt.
 
 \section{Zielsetzung}
-Das System soll in der Lage sein, fertige Aufgaben von Benutzerinnen und Benutzern aufzunehmen und diese bei identischem Lösungsanfang vorzuschlagen. Die SchülerInnen müssen sich dabei bei der Einsendung der Lösung sicher sein, dass diese korrekt ist und die Aufgabe auch im Schulbuch existiert. Der Lösungsvorschlag soll Informationen über den Einsender sowie über die Lösung selbst, wie Schulbuch, Seite und Nummer haben. Außerdem soll die Vertrauenswürdigkeit des Hochladers klar ersichtlich sein. So wird eine Lösung, die von einer Lehrperson hochgeladen wurde, mit einem Stern markiert und Lösungen von SchülerInnen, welche mehr als fünf Likes erhalten haben, mit einem Verifikation-Häkchen dargestellt. Es soll auch möglich sein, die Lösung mit einem Daumen nach oben beziehungsweise nach unten bewerten zu können und Kommentare zu verfassen. Lösungsvorschläge werden erst nach dem Hochladen von fünf Lösungen aktiviert. Dadurch soll die Bereitschaft zum Teilen von Lösungen angekurbelt werden.
+Das System soll in der Lage sein, fertige Aufgaben von BenutzerInnen aufzunehmen und diese bei identischem Lösungsanfang vorzuschlagen. Der Lösungsvorschlag soll Informationen über den/die EinsenderIn sowie über die Lösung selbst, wie Schulbuch, Seite und Nummer haben. Außerdem soll die Vertrauenswürdigkeit des Uploaders klar ersichtlich sein. So wird eine Lösung, die von einer Lehrperson hochgeladen wurde, mit einem Stern markiert und Lösungen von SchülerInnen, welche mehr als fünf Likes erhalten haben, mit einem Verifikation-Häkchen dargestellt. Es soll auch möglich sein, die Lösung mit einem Daumen nach oben beziehungsweise nach unten bewerten zu können und Kommentare zu verfassen. Lösungsvorschläge werden erst nach dem Hochladen von fünf Lösungen aktiviert. Dadurch soll die Bereitschaft zum Teilen von Lösungen angekurbelt werden.
 
 \section{Funktionsweise}
 
 \subsection{Datenbank}
-Damit jeder Zugriff auf die gleichen Informationen hat, wird das Programm mit einer Datenbank verbunden. In einer der Tabellen werden dann die Informationen der Lösung gespeichert: Primärschlüssel, Name des Einsenders, Schulbuch, Seite und Nummer der Aufgabe, Anzahl der Daumen hoch beziehungsweise runter und vieles mehr.
+Damit jeder Zugriff auf die gleichen Informationen hat, wird das Programm mit einer Datenbank verbunden. In einer der Tabellen werden dann die Informationen der Lösung gespeichert: Primärschlüssel, Name des Uploaders, Schulbuch, Seite und Nummer der Aufgabe, Anzahl der Daumen hoch beziehungsweise runter und vieles mehr.
 
 \subsection{Einsendung}
-Will die Nutzerin ihre oder der Nutzer seine Arbeit speichern, wird gefragt, ob sie oder er ihre oder seine Lösungen veröffentlichen möchte. Stimmt sie oder er zu, werden die Buchungssätze in eine später erläuterte Codierung umgewandelt und auf die Datenbank hochgeladen.
+Will ein/eine BenutzerIn die Arbeit speichern, wird gefragt, ob die Lösung veröffentlicht werden soll. Wird zugestimmt, werden die Buchungssätze in eine später erläuterte Codierung umgewandelt und auf die Datenbank hochgeladen.
 
 \subsection{Abfrage}
-Die BenutzerInnen müssen explizit das Buch, die Seite und Nummer der von ihnen bearbeiteten Aufgabe eingeben. Dann können sie noch auswählen, dass nur Lehrerlösungen angezeigt werden sollen. Es wird dann nach Übereinstimmungen in der Datenbank gesucht. Grundsätzlich setzt sich die Lösung mit den meisten Daumen hoch durch. Eine Lehrerlösung hat jedoch immer Vorrang.
+Die BenutzerInnen müssen explizit das Buch, die Seite und Nummer der von ihnen bearbeiteten Aufgabe eingeben. Dann können sie noch auswählen, dass nur Lehrerlösungen angezeigt werden sollen. Es wird dann nach Übereinstimmungen in der Datenbank gesucht. Grundsätzlich setzt sich die
+Lösung mit dem größten positiven Like-Dislike-Unterschied durch. Eine Lehrerlösung hat jedoch immer Vorrang.
 
 \subsection{Registrierung als LehrerIn}
-Damit bei den Lösungsvorschlägen zwischen LehrerIn und SchülerIn unterschieden werden kann, muss es eine Möglichkeit geben, sich als LehrerIn zu registrieren. Am Anfang haben alle Accounts standardmäßig einen SchülerInnen-Status. Um LehrerInnen-Rechte zu erhalten, müssen  sich die Lehrpersonen an den Administrator wenden. Dazu genügt eine E-Mail, wobei das Verifikationsverfahren noch nicht bekannt ist. Ist bewiesen, dass es sich bei dem Anwärter auch wirklich um eine Lehrperson handelt, wird ein Code zur Verfügung gestellt. Diesen gibt er oder sie dann in das Fester ein, welches unter dem Menüpunkt ,,Lehrer'' - ,,Code anfordern'' erscheint. Gibt es eine Übereinstimmung mit der Datenbank, wechselt der SchülerInnen-Account in einen LehrerInnen-Account.   
+Damit bei den Lösungsvorschlägen zwischen LehrerInnen und SchülerInnen unterschieden werden kann, muss es eine Möglichkeit geben, sich als LehrerIn zu registrieren. Am Anfang haben alle Accounts standardmäßig einen SchülerInnen-Status. Um LehrerInnen-Rechte zu erhalten, müssen sich die Lehrpersonen an den Administrator wenden. Ist bewiesen, dass es sich bei dem/der AnwärterIn auch wirklich um eine Lehrperson handelt, wird ein Code zur Verfügung gestellt. Diesen gibt er/sie dann in das Fester ein, welches unter dem Menüpunkt ,,Lehrer'' - ,,Code anfordern'' erscheint. Gibt es eine Übereinstimmung mit der Datenbank, wechselt der SchülerInnen-Account in einen LehrerInnen-Account.   
 
 
 
 \chapter{Fehlerkorrektur}
-\rhead{KAPITEL 9.  FEHLERKORREKTUR}
+\rhead{KAPITEL 8.  FEHLERKORREKTUR}
+\lhead{\thepage}
  
 Um selbstständig Üben zu können, sind richtige Lösungen zur Überprüfung essenziell.
 
@@ -444,12 +451,12 @@ Um selbstständig Üben zu können, sind richtige Lösungen zur Überprüfung es
 Das System soll in der Lage sein, Buchungssätze auf ihre Korrektheit zu überprüfen. Es soll außerdem auf die Art des Fehlers hingewiesen werden. Diese Funktion wird ebenfalls erst nach dem Hochladen von fünf Lösungen aktiviert.
 
 \section{Fehlererkennung}
-Die zur Überprüfung eingereichte Aufgabe wird zuerst in ihre encodierte Form umgewandelt. Die richtige Lösung, ebenfalls in encodierter Form, wird dann von der Datenbank heruntergeladen und mit dem encodierten String verglichen. Zu erkennen, ob eine Fehler existiert ist dann trivial. Die Schwierigkeit liegt darin, die Art des Fehlers zu erkennen. Der dazu entwickelte Algorithmus wird nun erläutert.
+Die zur Überprüfung eingereichte Aufgabe wird zuerst in ihre encodierte Form umgewandelt. Die richtige Lösung, ebenfalls in encodierter Form, wird dann von der Datenbank heruntergeladen und mit dem encodierten String verglichen. Zu erkennen, ob ein Fehler existiert, ist dann trivial. Die Schwierigkeit liegt darin, die Art des Fehlers zu erkennen. Der dazu entwickelte Algorithmus wird nun erläutert.
 
 \subsection{Fehlende Buchungssätze}
 
 \subsubsection{Problemstellung}
-Angenommen in einem System werden die Buchungssätze nacheinander verglichen. Angenommen es fehlt ein Buchungssatz, jedoch alle anderen sind richtig. Es werden alle nachfolgenden Buchungssätze auch als falsch markiert, obwohl sie eigentlich richtig sind, da sie ja um eine Stelle verschoben sind. Ein solches Korrektursystem wäre für die Benutzerin oder den Benutzer nicht sehr hilfreich. Deshalb muss eine Funktion eingebaut werden, die diesen Vorfall erkennt und dann richtig handelt. 
+Angenommen in einem System werden die Buchungssätze nacheinander verglichen. Angenommen es fehlt ein Buchungssatz, jedoch alle anderen sind richtig. Es werden alle nachfolgenden Buchungssätze auch als falsch markiert, obwohl sie eigentlich richtig sind, da sie ja um eine Stelle verschoben sind. Ein solches Korrektursystem wäre für den/die BenutzerIn nicht sehr hilfreich. Deshalb muss eine Funktion eingebaut werden, die diese Situation erkennt und dann richtig handelt. 
 
 
 \subsubsection{Lösung}
@@ -479,7 +486,8 @@ Aus der darunterliegenden Abbildung ist leicht zu erkennen, dass in der falschen
   
   
 \chapter{Prüfungen}
-\rhead{KAPITEL 9.  PRÜFUNGEN}
+\rhead{KAPITEL 10.  PRÜFUNGEN}
+\lhead{\thepage}
  
 Auch hinsichtlich Prüfungen lässt sich im Rechnungswesen einiges optimieren.
  
@@ -487,84 +495,87 @@ Auch hinsichtlich Prüfungen lässt sich im Rechnungswesen einiges optimieren.
 Prüfungen in disCount sollen die herkömmliche Prüfungsabwicklung nicht nur ersetzen, sondern auch erheblich verbessern. Speziell LehrerInnen sollen davon profitieren. Die Kontrolle soll komplett von der Software übernommen werden. Auch die Auswertung der Ergebnisse, auf welche die LehrerInnen häufig verzichten, wird durch das Programm erledigt. Außerdem soll das Schummeln unterbunden werden.
   
 \section{Umsetzung}
-Zuerst muss die Lehrperson die Lösung der Prüfung anhängen und die Anzahl an Teilnehmern angeben. Dann wird eine Prüfungsidentifikationsnummer vergeben. Die SchülerInnen gehen auf den Menüpunkt ,,Prüfung beitreten'' und geben diese PIN ein. Sie werden dann zum Warten aufgefordert. Die Lehrperson hat in der Zwischenzeit einen Überblick über alle beigetretenen SchülerInnen. Sind alle bereit, kann das Stagithugrtsignal vergeben werden und jegliche Funktionen wie Lösungsvorschläge oder Kommentare werden deaktiviert. Auch befinden sich die SchülerInnen ab der Erstellung des ersten Buchungssatzes in einer Prüfungsumgebung. Das heißt, dass diese während der Prüfung auch nicht mehr verlassen werden darf. Sollte das doch der Fall sein, wird der Schüler oder die Schülerin sofort aus der Prüfung geworfen und die Lehrerperson über das Vergehen informiert. 
+Zuerst muss die Lehrperson die Lösung der Prüfung anhängen und die Anzahl an Teilnehmern angeben. Dann wird eine Prüfungsidentifikationsnummer vergeben. Die SchülerInnen gehen auf den Menüpunkt ,,Prüfung beitreten'' und geben diese PIN ein. Sie werden dann zum Warten aufgefordert. Die Lehrperson hat in der Zwischenzeit einen Überblick über alle beigetretenen SchülerInnen. Sind alle bereit, kann das Startsignal vergeben werden und jegliche Funktionen wie Lösungsvorschläge oder Kommentare werden deaktiviert. Auch befinden sich die SchülerInnen ab der Erstellung des ersten Buchungssatzes in einer Prüfungsumgebung. Das heißt, dass diese während der Prüfung auch nicht mehr verlassen werden darf. Sollte das doch der Fall sein, wird der/die SchülerIn sofort aus der Prüfung geworfen und die Lehrerperson über das Vergehen informiert. 
   
 \section{Funktionsweise Datenbank}
   
 \subsection{Struktur}
   
-Für das Speichern der Daten für Prüfungen, wurde eine eigene Tabelle ,,exams'' angelegt. Die Datensätze darin bestehen aus folgenden Attributen: \newline\newline \textbf{id, resultID, nextIn, pStart, solution, BShelp, student1, student2, student3, ..., bs1, bs2, bs3, ...} \newline\newline
+Für das Speichern der Daten für Prüfungen wurde eine eigene Tabelle ,,exams'' angelegt. Die Datensätze darin bestehen aus folgenden Attributen: \newline\newline \textbf{id, resultID, nextIn, pStart, solution, BShelp, student1, student2, student3, ..., bs1, bs2, bs3, ...} \newline
   
 \noindent Grundsätzlich gibt es in der Tabelle zwei Arten von Datensätzen: Den Prüfungsdatensatz und den Lösungsdatensatz. Sobald die Lehrperson eine neue Prüfung erstellt hat, werden diese zwei zur Tabelle hinzugefügt wobei in der resultID des Prüfungsdatensatzes die id des Lösungsdatensatzes gespeichert wird, um die Zusammengehörigkeit zu bewahren. In solution wird die Lehrerlösung eingetragen und in BShelp die Entscheidung der LehrerInnen, ob Computerunterstützung erlaubt ist. 
 
 \subsection{Verbindung zur Prüfung}
 
-Die Rechner der SchülerInnen verbinden sich dann mit der Datenbank und tragen ihre ID (von der Tabelle users) in die Spalte student... ein. Damit der Rechner weiß, welche Spalte bereits besetzt ist, wurde das Attribut nextIn eingeführt. Tragt sich der Schülercomputer in eine Spalte ein, die von nextIn angezeigt wird, inkrementiert er anschließend das Feld nextIn und somit kann nichts überschrieben werden.
+Die Rechner der SchülerInnen verbinden sich dann mit der Datenbank und tragen ihre ID (von der Tabelle users) in die Spalte student... ein. Damit der Rechner weiß, welche Spalte bereits besetzt ist, wurde das Attribut nextIn eingeführt. Trägt sich der Schülercomputer in eine Spalte ein, die von nextIn angezeigt wird, inkrementiert er anschließend das Feld nextIn und somit kann nichts überschrieben werden.
 
 \subsection{Prüfungsablauf}
 
-Sobald sich alle TeilnehmerInnen eingetragen haben, kann die Lehrperson das Startsignal geben. Dieses wird im Feld pStart in Form eines Integers gespeichert. Die Prüfung ist somit gestartet. Wie bereits erwähnt wird der Lehrer sofort alarmiert, wenn ein Schüler oder eine Schülerin die Prüfungsumgebung verlässt.
+Sobald sich alle TeilnehmerInnen eingetragen haben, kann die Lehrperson das Startsignal geben. Dieses wird im Feld pStart in Form eines Integers gespeichert. Die Prüfung ist somit gestartet. Wie bereits erwähnt wird der/die LehrerIn sofort alarmiert, wenn ein/eine SchülerIn die Prüfungsumgebung verlässt.
 
 \subsection{Prüfungsende, Ergebnis und Auswertung}
 
-Ist ein Schüler oder eine Schülerin fertig, muss im Menü ,,Prüfung abgeben'' ausgewählt werden. Die Arbeit wird dann von disCount korrigiert. In eine Liste, welche zuvor mit Nullen gefüllt wurde, wird bei einem korrekten Buchungssatz eine Eins eingetragen. Also wenn zum Beispiel der dritte Buchungssatz richtig ist, wird beim Index drei eine Eins eingetragen. Somit lässt sich der Prozentsatz sehr leicht ausrechnen. In den dazugehörigen Lösungsdatensatz wird in die entsprechende Spalte (student...) dieser Prozentsatz eingetragen. Somit ist eindeutig ermittelbar, welcher Schüler beziehungsweise welche Schülerin welchen Prozentsatz erreicht hat. Zusätzlich wird noch die Erfolgsquote bei jedem Buchungssatz erfasst, damit die LehrerInnen nach Prüfungsschluss eine genaue Auswertung der Prüfung bekommen. Dafür gibt es im Lösungsdatensatz die Attribute ,,bs1, bs2, bs3, ...''. Dabei erfasst bs1 die Punkte, welche die TeilnehmerInnen insgesamt beim Buchungssatz eins erzielt haben und bs2 die Punkte bei Buchungssatz zwei und so weiter. Gibt der Schüler oder die Schülerin die Prüfung ab, wird also nicht nur der Prozentsatz gespeichert, sondern auch die Spalten bs1, bs2, bs3, ... werden entsprechend erhöht oder bleiben bei Misserfolg gleich. 
+Ist ein/eine SchülerIn fertig, muss im Menü ,,Prüfung abgeben'' ausgewählt werden. Die Arbeit wird dann von disCount korrigiert. In eine Liste, die zuvor mit Nullen gefüllt wurde, wird bei einem korrekten Buchungssatz eine Eins eingetragen. Also wenn zum Beispiel der dritte Buchungssatz richtig ist, wird beim Index drei eine Eins eingetragen. Somit lässt sich der Prozentsatz sehr leicht ausrechnen. In den dazugehörigen Lösungsdatensatz wird in die entsprechende Spalte (student...) dieser Prozentsatz eingetragen. Somit ist eindeutig ermittelbar, welcher/welche SchülerIn welchen Prozentsatz erreicht hat. Zusätzlich wird noch die Erfolgsquote bei jedem Buchungssatz erfasst, damit die LehrerInnen nach Prüfungsschluss eine genaue Auswertung der Prüfung bekommen. Dafür gibt es im Lösungsdatensatz die Attribute ,,bs1, bs2, bs3, ...''. Dabei erfasst bs1 die Punkte, welche die TeilnehmerInnen insgesamt beim Buchungssatz eins erzielt haben und bs2 die Punkte bei Buchungssatz zwei und so weiter. Gibt der/die SchülerIn die Prüfung ab, wird also nicht nur der Prozentsatz gespeichert, sondern auch die Spalten bs1, bs2, bs3, ... werden entsprechend erhöht oder bleiben bei Misserfolg gleich. 
 
 
 \chapter{Verwaltung verschiedener Schulen}
 Da es vorgesehen ist, dass disCount an verschiedenen Schulen zum Einsatz kommt, muss die Datenbank auch in der Lage sein, Daten verschiedener Schulen unterzubringen. Das stellt jedoch keine Herausforderung dar, da fast alle Tabellen in der Lage sind, Daten verschiedener Schulen zusammen zu speichern. Bei jenen mit Lösungsvorschlägen als Inhalt ist das nicht möglich, da nicht alle Schulen dasselbe Lehrbuch verwenden und somit die Aufgaben nicht mehr übereinstimmen würden. Deshalb muss für jede Schule eine eigene Tabelle angelegt werden. Bei der Registrierung kann dann der Schultyp ausgewählt werden und die Lösungsvorschläge werden dann automatisch in die richtige Tabelle gespeichert, beziehungsweise von der richtigen Tabelle abgerufen.
   
 
-\part{disCount Verwaltungsprogramm}
+\part{disCount-Verwaltungsprogramm}
 
 \chapter{Ziel und Befehle}
-\rhead{KAPITEL 10.  ZIEL UND BEFEHLE}
+\rhead{KAPITEL 11.  ZIEL UND BEFEHLE}
+\lhead{\thepage}
 
 \section{Ziel}
-Um die Datensätze in der oben vorgestellten Datenbank einfach verwalten zu können, soll ein Konsolenprogramm geschrieben werden, welches Aufgaben wie das Ausgeben und Löschen von redundanten Lösungen und das Schreiben und Anzeigen von gelesenen Mitteilungen erledigt. Ansonsten müsste das mit einer grafischen Webanwendung, wie beispielsweise phpmyadmin gemacht werden. Bei vielen Datensätzen kann jedoch speziell das Suchen nach Dubletten in einer Spalte sehr mühsam bis nicht machbar sein. Das Programm soll wie bereits erwähnt von einer Konsole aus also mit Befehlen bedienbar sein. Deshalb soll es auch in der Programmiersprache C geschrieben werden und auf dem Linux-Betriebssystem laufen können.
+Um die Datensätze in der oben vorgestellten Datenbank einfach verwalten zu können, soll ein Konsolen-Programm geschrieben werden, welches Aufgaben wie das Ausgeben und Löschen von redundanten Lösungen und das Schreiben und Anzeigen von gelesenen Mitteilungen erledigt. Ansonsten müsste das mit einer grafischen Webanwendung, wie beispielsweise phpmyadmin gemacht werden. Bei vielen Datensätzen kann jedoch speziell das Suchen nach Dubletten in einer Spalte sehr mühsam bis nicht machbar sein. Das Programm soll wie bereits erwähnt von einer Konsole aus, also mit Befehlen bedienbar sein. Deshalb soll es auch in der Programmiersprache C geschrieben werden und auf dem Linux-Betriebssystem laufen können.
 
 \section{Befehle}
 
 \subsection{Redundanzen}
 
 \subsubsection{showDuplicates -hbla}
-Manuell kann das Suchen nach Redundanzen sehr mühsam sein. Das Verwaltungsprogramm zeigt nach der Eingabe dieses Befehls den gesamten Datensatz aller identischen Lösungen, die in der Tabelle ,,usersolutionshbla'' an. Anstelle von ,,-hbla'' kann auch ein anderer Schultyp geschrieben werden.
+Manuell kann das Suchen nach Redundanzen sehr mühsam sein. Das Verwaltungsprogramm zeigt nach der Eingabe dieses Befehls den gesamten Datensatz aller identischen Lösungen, die in der Tabelle ,,usersolutionshbla'' sind, an. Anstelle von ,,-hbla'' kann auch ein anderer Schultyp geschrieben werden.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=15cm]{images/showDuplicates_hbla}
+	\includegraphics[width=16.5cm]{images/showDuplicates_hbla}
 	\caption[Befehl showDuplicates -hbla]{Ergebnis des Befehls showDuplicates -hbla}
 \end{figure}
 
 
 \subsubsection{rm -hbla -a}
-Dieser Befehl zeigt zuerst alle Redundanzen an und entfernt diese dann aus der Tabelle. Danach muss jedoch auch noch die Anzahl an hochgeladenen Lösungen der Nutzer und Nutzerinnen, deren Lösung entfernt wurde, um eins dekrementiert werden. Es kann hierbei natürlich vorkommen, dass BenutzerInnen wieder unter die Grenze von fünf Beträgen kommt. Auch hier kann statt ,,hbla'' wieder ein anderer Schultyp eingesetzt werden.
+Dieser Befehl zeigt zuerst alle Redundanzen an und entfernt diese dann aus der Tabelle. Danach muss jedoch auch noch die Anzahl an hochgeladenen Lösungen der NutzerInnen, deren Lösung entfernt wurde, um eins dekrementiert werden. Es kann hierbei natürlich vorkommen, dass BenutzerInnen wieder unter die Grenze von fünf Beträgen kommen. Auch hier kann statt ,,hbla'' wieder ein anderer Schultyp eingesetzt werden.
 
 \subsection{Nachrichten}
 
 \subsubsection{msg -a}
-Wenn der Administrator in disCount eine Nachricht an einen bestimmten Nutzer oder eine bestimmte Nutzerin senden will, kann er das mithilfe der Datenbank machen. In der Tabelle ..messages'' kann ein Empfänger oder eine Empfängerin, zwei Überschriften, der Inhalt und der Typ der Nachricht eingegeben werden. Beim nächsten Start von disCount holt sich das Programm die Nachricht von der Datenbank und blendet diese dann auf dem Bildschirm aus. Dann trägt das Programm in der Tabelle in der Spalte ,,received'' ,,yes'' ein und die Nachricht wird nicht wieder angezeigt. Der Befehl ,,msg -a'' zeigt alle Nachrichten an.
+Wenn der Administrator eine Nachricht an einen/eine bestimmten/bestimmte NutzerIn senden will, kann er das mithilfe der Datenbank machen. In der Tabelle ..messages'' kann ein/eine EmpfängerIn, zwei Überschriften, der Inhalt und der Typ der Nachricht eingegeben werden. Beim nächsten Start von disCount holt sich das Programm die Nachricht von der Datenbank und gibt diese aus. Dann trägt das Programm in der Spalte ,,received'' ,,yes'' ein und die Nachricht wird nicht wieder angezeigt. Der Befehl ,,msg -a'' zeigt alle Nachrichten an.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=15cm]{images/msg_a}
+	\includegraphics[width=16.5cm]{images/msg_a}
 	\caption[Befehl msg -a]{Ergebnis des Befehls msg -a}
 \end{figure}
   
   
 
 \subsubsection{msg -no}
-Dieser Befehl zeigt alle noch ausständigen Nachrichten an.
+Dieser Befehl zeigt alle noch nicht angesehenen Nachrichten an.
 
 
-\begin{figure}[b]
-	\centering
-	\includegraphics[width=15cm]{images/msg_new}
-	\caption[Befehl msg -new]{Ergebnis des Befehls msg -new}
-\end{figure}
+
   
 \subsubsection{msg -new}
 Hiermit kann man eine neue Nachricht verfassen und abrufbar machen.
 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16.5cm]{images/msg_new}
+	\caption[Befehl msg -new]{Ergebnis des Befehls msg -new}
+\end{figure}
 
 
 \subsubsection{msg -yes}
@@ -586,10 +597,11 @@ Wie im Linux-Terminal kann durch den ersteren Befehl das Terminal-Fenster aufger
 
 
 \chapter{Aufbau und Implementierung der Funktionen}
-\rhead{KAPITEL 11.  AUFBAU UND IMPLEMENTIERUNG DER FUNKTIONEN}
+\rhead{KAPITEL 12.  AUFBAU UND IMPLEMENTIERUNG DER FUNKTIONEN}
+\lhead{\thepage}
 
 \subsection{Aufbau}
-Das discount-Verwaltungsprogramm besteht aus drei Unterprogrammen: der Konsole, dem Redundanzenfinder und dem Nachrichtenfinder und Verfasser. Das Konsolen-Programm ordnet den eingegebenen Funktionen die richtigen Funktionen zu und ruft diese auch auf. Das Redundanzen-Programm sucht und löscht identische Lösungen und dekrementiert die hochgeladenen Lösungen. Das Nachrichten-Programm löscht bestimmte Nachrichten und kann auch neue erzeugen.
+Das disCount-Verwaltungsprogramm besteht aus drei Unterprogrammen: der Konsole, dem Redundanzen-Finder und dem Nachrichtenfinder und Verfasser. Das Konsolen-Programm ordnet den eingegebenen Funktionen die richtigen Funktionen zu und ruft diese auch auf. Das Redundanzen-Programm sucht und löscht identische Lösungen und dekrementiert die hochgeladenen Lösungen. Das Nachrichten-Programm löscht bestimmte Nachrichten und kann auch neue erzeugen.
 
 \subsection{Prozesserzeugung in Linux}
 Da im Programm Systemaufrufe zum Erzeugen von Prozessen verwendet werden, werden diese nun kurz vorgestellt.
@@ -613,10 +625,10 @@ void enterCommand(MYSQL *conn)
 
 \noindent Zu allererst wird mit dieser Funktion eine Verbindung zur Datenbank aufgestellt. Ist dieser Schritt erfolgreich, wird folgende Funktion aufgerufen:\\
 
-\noindent Der eingegebene Befehl des/der BenutzerIn wird in einem Pointer gespeichert und durch eine Reihe von if-Statements mit den verfügbaren Befehlen verglichen. Ein Vergleich könnte wie oben gezeigt aussehen. (siehe A.3.1)\\
+\noindent Der eingegebene Befehl des Users wird in einem Pointer gespeichert und durch eine Reihe von if-Statements mit den verfügbaren Befehlen verglichen. Ein Vergleich könnte wie oben gezeigt aussehen. (siehe A.3.1)\\
 
-\noindent Da das Redundanzenprogramm ein selbstständiges Programm ist, wird für dieses in der Funktion createProcess ein neuer Prozess erzeugt.\\
-So wird mit fork() der Kindprozess erstellt. Gibt dieser Systemaufruf -1 zurück, konnte der Prozess nicht erfolgreich erzeugt werden und das Programm terminiert. Wird null zurückgegeben, handelt es sich um den Kindprozess und wir laden ein neues Programm in dessen Adressraum. Als Parameter für dessen main-Funktion, geben wir noch den Namen der Tabelle, in welcher eine Operation ausgeführt werden soll und eine Extraoperation wie zum Beispiel ,,rm'' für das Löschen bestimmter Datensätze, mit. Ist ret größer als null handelt es sich um den Vaterprozess, also der Konsole, welche vorerst durch wait() auf das Terminieren aller Kindprozesse warten muss und dann durch den Aufruf von ,,enterCommand()'' wieder für den nächsten Befehl bereit ist. (siehe A.3.2)\\
+\noindent Da das Redundanzen-Programm ein selbstständiges Programm ist, wird für dieses in der Funktion createProcess ein neuer Prozess erzeugt.\\
+So wird mit fork() der Kindprozess erstellt. Gibt dieser Systemaufruf -1 zurück, konnte der Prozess nicht erfolgreich erzeugt werden und das Programm terminiert. Wird null zurückgegeben, handelt es sich um den Kindprozess und wir laden ein neues Programm in dessen Adressraum. Als Parameter für dessen main-Funktion geben wir noch den Namen der Tabelle mit, in der eine Operation ausgeführt werden soll. Ist ret größer als null, handelt es sich um den Vaterprozess, also um die Konsole, welche vorerst durch wait() auf das Terminieren aller Kindprozesse warten muss und dann durch den Aufruf von ,,enterCommand()'' wieder für den nächsten Befehl bereit ist. (siehe A.3.2)\\
 
 \subsubsection{Programm zum Anzeigen und Löschen von Redundanzen}
 Als nächstes widmen wir uns dem Programm zum Anzeigen und Löschen der Redundanzen. In dessen main-Funktion wird wieder eine Verbindung zur Datenbank aufgebaut und bei Erfolg die Funktion ,,showDuplicates(conn, argv[0])'' aufgerufen, wobei argv[0] auf die Tabelle zeigt, dessen Dubletten angezeigt werden sollen. Wir werden hier nur auf die wichtigsten Bestandteile eingehen:\\
@@ -630,19 +642,19 @@ Als nächstes widmen wir uns dem Programm zum Anzeigen und Löschen der Redundan
 \noindent Es folgen einige Initialisierungen, dessen Funktion in Kommentarform daneben steht. Im duplicatesID-Array werden alle ID's der Redundanzen gespeichert, damit eine später eingeführte Funktionen diese in einer SQL-Abfrage zum Löschen der Datensätze verwenden kann. (siehe A.3.6)\\
 
 \noindent Es wird nun durch alle Lösungen durchiteriert und durch eine SQL-Abfrage überprüft, ob diese irgendwo noch einmal vorkommen. Davor wird noch kontrolliert, ob die Lösung bereits als Redundanz gekennzeichnet wurde. Wenn ja, wird der Inhalt der for-Loop durch das goto-Statement übersprungen, damit die Redundanzen nicht doppelt ausgegeben werden.\\
-Alle bei der SQL-Abfrage gefundenen Dubletten werden in res gespeichert und später weiter verarbeitet. (siehe A.3.7)\\
+Alle bei der SQL-Abfrage gefundenen Dubletten werden in res gespeichert und später weiterverarbeitet. (siehe A.3.7)\\
 
 \noindent Die Anzahl der identischen Datensätze wird in rowCount gespeichert. (siehe A.3.8)\\
 
 \noindent Wenn mehr als ein identischer Datensatz gefunden wurde, gibt es mindestens ein Duplikat und es muss etwas ausgegeben werden. Im den duplicates-Array wird der redundante Inhalt eingetragen. (siehe A.3.9)\\
 
-\noindent Die kommpletten Informationen der Redundanzen werden ausgegeben und deren ID in den duplicatesID-Array eingetragen. (siehe A.3.10)\\
+\noindent Die kompletten Informationen der Redundanzen werden ausgegeben und deren ID in den duplicatesID-Array eingetragen. (siehe A.3.10)\\
 
 \noindent Da alle Duplikate mit Ausnahme von einem gelöscht werden sollen, wird der letzte Eintrag durch das Dekrementieren von j beim nächsten Mal überschrieben und somit gleichzeitig aus dem Array gelöscht. (siehe A.3.11)\\
 
 \noindent Zum Schluss wird noch die globale Variable sizeDuplicatesID mit der Größe des duplicatesID-Array gesetzt und dieser auch zurückgegeben. (siehe A.3.12)\\
 
-\noindent Die showDuplicates-Funktion wurde von der main-Funktion aufgerufen und kehrt dort wieder mit der Adresse des showDuplicates-Array zurück, welche im Pointer tempP gespeichert wird. Mit diesen Informationen werden dann die reduceAdded -und deleteDuplicates-Funktionen, je nachdem ob an der zweiten Stelle des Arrays und Parameters argv der main-Funktion ,,rm'' steht, aufgerufen oder nicht aufgerufen. (siehe A.3.13)
+\noindent Die showDuplicates-Funktion wurde von der main-Funktion aufgerufen und kehrt dort wieder mit der Adresse des showDuplicates-Array zurück, welche im Pointer tempP gespeichert wird. Mit diesen Informationen werden dann die reduceAdded- und deleteDuplicates-Funktionen, je nachdem, ob an der zweiten Stelle des Arrays und Parameters argv der main-Funktion ,,rm'' steht, aufgerufen oder nicht aufgerufen. (siehe A.3.13)
 
 
 
@@ -652,13 +664,14 @@ Alle bei der SQL-Abfrage gefundenen Dubletten werden in res gespeichert und spä
 \part{Tabellenkalkulation}
 
 \chapter{Tabellen in JAVA}
-\rhead{KAPITEL 12.  TABELLEN IN JAVA}
+\rhead{KAPITEL 13.  TABELLEN IN JAVA}
+\lhead{\thepage}
 
 \section{Grundlagen}
 Um eine Tabelle in JAVA zu erstellen, muss ein JTable-Object initialisiert werden. Dieses wird in einen ,,Wrapper'', dem DefaultTableModel, eingebettet. Dieses stellt mehrere hilfreiche Funktionen zur Verfügung. Anschließend müssen die Zeilen und Spalten, welche am Anfang angezeigt werden, definiert werden. Die Anzahl dieser kann jedoch zur Laufzeit mit Hilfe des DefaultTableModels geändert werden.
 
 \subsection{Listener}
-Wie bei allen anderen GUI-Elementen, gibt es auch hier eine breite Anzahl an Listener. Hier werden nur die im Programm verwendeten erklärt.
+Wie bei allen anderen GUI-Elementen gibt es auch hier eine breite Anzahl an Listener. Hier werden nur die im Programm verwendeten erklärt.
 
 \subsubsection{MouseListener}
 Dieser wartet darauf, dass eine Zelle angeklickt wird. Durch bereitgestellte Funktionen kann dann unter anderem der Index der durch die Interaktion nun markierten Zelle geholt werden.
@@ -670,7 +683,7 @@ Dieser wird, wie der Name schon verrät, dem DefaultTableModel zugeordnet. Er st
 In JAVA hat fast jedes GUI-Element einen eigenen Objekttyp. Mit diesem kommen in der Regel spezialisierte Funktionen, die dem Programmierer enorm viel Arbeit abnehmen und in Sachen Effizienz sehr ausgeklügelt sind. Leider gibt es keinen eigenen Objekttyp für eine JTable-Zelle. Das erschwert die Programmierung um einiges. Das größte Problem ist, dass man die einzelnen Zellen nur durch Renderer ansprechen kann. Ohne diese wirken sich Formatierungen immer auf die gesamte Tabelle aus. Auch kann man die Zellen nicht in einer Liste speichern. Man muss also immer die Koordinaten abfragen und diese dann in einem Array abspeichern. Dann muss man sie wieder herausfiltern und nach dem Wert an dieser Position fragen. Dass kein Objekttyp existiert, heißt auch, dass man den Zellen keinen Listener zuordnen kann. Wieder muss dieser Schritt durch Umwege selbst programmiert werden. Wie man sieht, führt das zu einer unnötigen Komplizierung des Codes.
 
 \subsection{Renderer}
-Hier wird nur der TableCellRenderer diskutiert. Dieser muss einem JTable zugeordnet werden. Alle Methoden darin beziehen sich automatisch auf alle Zellen. Man kann also auch hier keine einzelne Zelle direkt ansprechen. Dazu müssen if-Statements eingebaut werden, die nur bestimmte Zeilen beziehungsweise Spaltenindizes zulassen. So kann annähernd erreicht werden, was man will. Der Renderer wird jedes Mal aufgerufen, wenn irgendein ,,Event'' in der Tabelle auftritt. Das bedeutet, dass er parallel zu den anderen Listener der Tabelle ausgeführt wird und es möglicherweise zu Widersprüchen kommen kann, die alle geregelt werden müssen. Durch die Reaktion auf jedes Event, wird er außerdem oft ungewollt ausgeführt. Das wird geregelt, indem der eigentlich angesprochene Listener, eine boolsche Variable setzt, die dann im Renderer erkannt wird und die Funktion zur frühzeitigen Terminierung zwingt.
+Hier wird nur der TableCellRenderer diskutiert. Dieser muss einem JTable zugeordnet werden. Alle Methoden darin beziehen sich automatisch auf alle Zellen. Man kann also auch hier keine einzelne Zelle direkt ansprechen. Dazu müssen if-Statements eingebaut werden, die nur bestimmte Zeilen- beziehungsweise Spaltenindizes zulassen. So kann annähernd erreicht werden, was man will. Der Renderer wird jedes Mal aufgerufen, wenn irgendein ,,Event'' in der Tabelle auftritt. Das bedeutet, dass er parallel zu den anderen Listener der Tabelle ausgeführt wird und es möglicherweise zu Widersprüchen kommen kann, die alle geregelt werden müssen. Durch die Reaktion auf jedes Event, wird er außerdem oft ungewollt ausgeführt. Das wird geregelt, indem der eigentlich angesprochene Listener eine boolsche Variable setzt, die dann im Renderer erkannt wird und die Funktion zur frühzeitigen Terminierung zwingt.
 
 
 
@@ -679,10 +692,11 @@ Hier wird nur der TableCellRenderer diskutiert. Dieser muss einem JTable zugeord
 
 
 \chapter{Unterschied zu anderen Programmen und implementierte Funktionen}
-\rhead{KAPITEL 13.  UNTERSCHIED ZU ANDEREN PROGRAMMEN UND IMPLEMENTIERTE FUNKTIONEN}
+\rhead{KAPITEL 14.  UNTERSCHIED ZU ANDEREN PROGRAMMEN UND IMPLEMENTIERTE FUNKTIONEN}
+\lhead{\thepage}
  
 \section{Unterschied}
-Die Berechnung von komplizierteren Verfahren aus dem Rechnungswesen, wird durch die Möglichkeit zur Verwendung einer Tabellenkalkulation enorm vereinfacht. Wieder gibt es hier bereits viele Programme die auf das Rechnen in einer Tabelle spezialisiert sind. Jedem/Jeder ComputerbenutzerIn sollte das Office-Programm ,,Excel'' bekannt sein. Da dieses Programm aber hauptsächlich auf den Büroalltag abgestimmt ist und es deshalb keine speziellen Features und Befehle bezüglich dem Rechnungswesen gibt, kommt man damit nicht viel schneller zur Lösung als auf dem Papier.\\
+Die Berechnung von komplizierteren Verfahren aus dem Rechnungswesen wird durch die Möglichkeit zur Verwendung einer Tabellenkalkulation enorm vereinfacht. Wieder gibt es hier bereits viele Programme, die auf das Rechnen in einer Tabelle spezialisiert sind. Jedem/Jeder ComputerbenutzerIn sollte das Office-Programm ,,Excel'' bekannt sein. Da dieses Programm aber hauptsächlich auf den Büroalltag abgestimmt ist und es deshalb keine speziellen Features und Befehle bezüglich des Rechnungswesens gibt, kommt man damit nicht viel schneller zur Lösung als auf dem Papier.\\
 Die Tabellenkalkulation, welche in disCount implementiert wurde, unterstützt alle relevanten tabellenkalkulatorischen Funktionen. Zudem gibt es spezielle Befehle, die dem User viele Berechnungsschritte ersparen und ein effizientes und übersichtliches Arbeiten ermöglichen.
 
 
@@ -694,22 +708,22 @@ Die Tabellenkalkulation, welche in disCount implementiert wurde, unterstützt al
 
 
 \subsubsection{Berechnung von arithmetischen Operationen in einer Zelle}
-Dazu muss man nur zwei Zahlen durch ein unterstütztes arithmetisches Symbol: ,,+, -, *, /'' trennen. Nachdem man die Tab-Taste gedrückt hat, erscheint das Ergebnis in der Zelle. Um die richtige Zelle zu erwischen, wurde ein TableChangeListener implementiert. Dieser wartet darauf, dass sich der Inhalt einer Zelle ändert. Tritt dieser Fall ein, holt er durch eine Abfrage den Index der geänderten Reihe und Spalte. Durch eine weitere Abfrage wird der enthaltene Wert erhalten, der gleich auf arithmetische Operationen überprüft wird. Sind keine enthalten, wird eine andere Methode, die erst diskutiert wird, ausgeführt. Sonst werden aus dem Inhalt der Zelle die beiden Zahlen herausgefiltert und das Ergebnis berechnet und ausgegeben.
+Dazu muss man nur zwei Zahlen durch ein unterstütztes arithmetisches Symbol: ,,+, -, *, /'' trennen. Nachdem man die Tab-Taste gedrückt hat, erscheint das Ergebnis in der Zelle. Um die richtige Zelle zu erwischen, wurde ein TableChangeListener implementiert. Dieser wartet darauf, dass sich der Inhalt einer Zelle ändert. Tritt dieser Fall ein, holt er durch eine Abfrage den Index der geänderten Reihe und Spalte. Durch eine weitere Abfrage wird der Wert erhalten, der gleich auf arithmetische Operationen überprüft wird. Sind keine enthalten, wird eine andere Methode, die erst diskutiert wird, ausgeführt. Sonst werden aus dem Inhalt der Zelle die beiden Zahlen herausgefiltert und das Ergebnis berechnet und ausgegeben.
 
 
 \subsubsection{Berechnung von arithmetischen Operationen zwischen verschiedenen Zellen}
-Die Verknüpfung der Werte zweier Zellen, durch eine erlaubte Operation, muss durch ein ,,='' eingeleitet werden. Anschließend wird die erste Zelle angeklickt. Deren Wert erscheint dann nach dem ,,=''. Nun muss ein arithmetisches Zeichen eingegeben und anschließend die zweite Zelle ausgewählt werden. Deren Wert erscheint auch in der Zelle und nach dem Drücken der Tab-Taste, wird der Inhalt durch das Ergebnis ersetzt. Die Implementation dieser Funktion ist wesentlich komplexer als die obere, da jetzt mehrere Klicks des Users involviert sind. Da bei einem Klick auch der MouseListener ausgeführt wird, gibt es eine Kommunikation zwischen den beiden mit Hilfe von boolschen Variablen, die das Ausführen erlauben oder nicht. Wurde der Wert vollständig eingegeben, wird nun nach dem Vorhandensein des ,,=''-Zeichens geprüft. Ist es enthalten, wird es vom String gelöscht und die Tabelle aktualisiert. Der neue String wird nun von der Methode oben erkannt und der analoge Algorithmus wird ausgeführt.
+Die Verknüpfung der Werte zweier Zellen durch eine erlaubte Operation, muss durch ein ,,='' eingeleitet werden. Anschließend wird die erste Zelle angeklickt. Deren Wert erscheint dann hinter dem ,,=''. Nun muss ein arithmetisches Zeichen eingegeben und anschließend die zweite Zelle ausgewählt werden. Deren Wert erscheint auch in der Zelle und nach dem Drücken der Tab-Taste, wird der Inhalt durch das Ergebnis ersetzt. Die Implementation dieser Funktion ist wesentlich komplexer als die obere, da jetzt mehrere Klicks des Users involviert sind. Da bei einem Klick auch der MouseListener ausgeführt wird, gibt es eine Kommunikation zwischen den beiden mit Hilfe von boolschen Variablen, die das Ausführen erlauben oder nicht. Wurde der Wert vollständig eingegeben, wird nun nach dem Vorhandensein des ,,=''-Zeichens geprüft. Ist es enthalten, wird es vom String gelöscht und die Tabelle aktualisiert. Der neue String wird nun von der Methode oben erkannt und der analoge Algorithmus wird ausgeführt.
 
 
 \subsubsection{Berechnung des Produktes beziehungsweise der Summe durch das Markieren von Zellen}
-In der Tabelle wird durch das Markieren von einer Zeile und zwei Spalten, das Produkt der darin enthaltenen Werte berechnet. Werden beliebig viele Zeilen und eine Spalte markiert, wird die Summe berechnet. Wird ein Zellbereich markiert und die Entertaste gedrückt, wird eine Methode aktiv, die eine weitere Methode aufruft, welche einen Array mit den Indizes der markierten Zeilen beziehungsweise Spalten zurückgibt. Nach der Analyse der Länge des Arrays, steht fest ob es sich um eine horizontale oder vertikale Operation handelt. Das weitere Verfahren wird im nächsten Abschnitt erklärt. 
+In der Tabelle wird durch das Markieren einer Zeile und zwei Spalten das Produkt der darin enthaltenen Werte berechnet. Werden beliebig viele Zeilen und eine Spalte markiert, wird die Summe berechnet. Wird ein Zellbereich markiert und die Entertaste gedrückt, wird eine Methode aktiv, die eine weitere Methode aufruft, welche einen Array mit den Indizes der markierten Zeilen beziehungsweise Spalten zurückgibt. Nach der Analyse der Länge des Arrays, steht fest, ob es sich um eine horizontale oder vertikale Operation handelt. Das weitere Verfahren wird im nächsten Abschnitt erklärt. 
 
 
 \subsubsection{Erstellung von Abhängigkeiten, die auf Änderungen reagieren}
-Nachdem die Art der Operation festgestellt wurde, werden die Indizes der in die Berechnung involvierten Zellen, zusammen in eine Liste eingetragen, die in eine Hauptliste eingebettet ist. Die Einträge gehören ab jetzt zusammen und sind von einander abhängig. Das heißt: wenn eine dieser Zellen verändert wird, wird erneut die Summe beziehungsweise das Produkt berechnet.
+Nachdem die Art der Operation festgestellt wurde, werden die Indizes der in die Berechnung involvierten Zellen zusammen in eine Liste eingetragen, die in eine Hauptliste eingebettet ist. Die Einträge gehören ab jetzt zusammen und sind voneinander abhängig. Das heißt: wenn eine dieser Zellen verändert wird, wird erneut die Summe beziehungsweise das Produkt berechnet.
 
-\subsubsection{Entstandenen Beziehungen werden durch Farben angezeigt}
-Damit der/die BenutzerIn stets weiß, wie er zu einem Ergebnis gekommen ist, werden beim Klick auf eine Zelle, alle Zellen, die eine Beziehung zu der ausgewählten haben, in der gleichen Farbe umrahmt. Da es hier wieder Komplikationen mit dem Renderer gibt und der Algorithmus verhältnismäßig lang ist, wird nicht genauer auf diesen und den der obigen Funktion eingegangen.
+\subsubsection{Entstandene Beziehungen werden durch Farben angezeigt}
+Damit der/die BenutzerIn stets weiß, wie er/sie zum Ergebnis gekommen ist, werden beim Klick auf eine Zelle, alle Zellen, die eine Beziehung zu der ausgewählten haben, in der gleichen Farbe umrahmt. Da es hier wieder Komplikationen mit dem Renderer gibt und der Algorithmus verhältnismäßig lang ist, wird nicht genauer auf diesen und jenen der obigen Funktion eingegangen.
 
 
 
@@ -718,23 +732,24 @@ Damit der/die BenutzerIn stets weiß, wie er zu einem Ergebnis gekommen ist, wer
 \part{Speicherung und Dateiformat}
 
 \chapter{Encodierung}
-\rhead{KAPITEL 14.  ENCODIERUNG}
+\rhead{KAPITEL 15.  ENCODIERUNG}
+\lhead{\thepage}
 Wir wollen generell zwei Arten von Dateien speichern. Einmal die Textdatei mit den Buchungssätzen und einmal die disCount-Datei mit der Encodierung. Auf die Speicherung dieser beiden Dateien wird zuerst eingegangen.
 
 
 \section{Übersicht über den Ablauf}
-Will der/die BenutzerIn die Buchungssätze in einer Textdatei speichern, wird automatisch auch eine Datei mit der Dateiendung dc, für disCount, abgespeichert. Damit zu diesem Zeitpunkt nicht alle Buchungssätze auf einmal encodiert werden müssen, wird das in kleinen Schritten erledigt, nämlich jedes Mal, wenn der Buchungssatz auf dem Arbeitspanel ausgegeben wird. Dazu werden beim Start des Programms zwei Listen angelegt. In einer der beiden werden die Buchungssätze, bereits mit den Abständen und den Zeilenumbrüchen, die in der Textdatei dann sichtbar sein sollen, uncodiert abgespeichert. In der anderen werden der Inhalt mit Encodierung gespeichert, die nun definiert wird.
+Will der/die BenutzerIn die Buchungssätze in einer Textdatei speichern, wird automatisch auch eine Datei mit der Dateiendung .dc (für disCount) abgespeichert. Damit zu diesem Zeitpunkt nicht alle Buchungssätze auf einmal encodiert werden müssen, wird das in kleinen Schritten erledigt, nämlich jedes Mal, wenn der Buchungssatz auf dem Arbeitspanel ausgegeben wird. Dazu werden beim Start des Programms zwei Listen angelegt. In einer der beiden werden die Buchungssätze, bereits mit den Abständen und den Zeilenumbrüchen, die in der Textdatei dann sichtbar sein sollen, uncodiert abgespeichert. In der anderen wird der Inhalt mit Encodierung gespeichert, die nun definiert wird.
 
 \section{Definition und Implementierung der Codierung}
 
 \subsection{Definition}
-\# $:=$ signisalisiert den Anfang eines neuen Buchungssatzes\\
+\# $:=$ signalisiert den Anfang eines neuen Buchungssatzes\\
 + $:=$ Buchungssatz hat rechts mehr Konten als links\\
-- $:=$ umgekehrt\\
-2 | 3 | 4 $:=$ die Anzahl der zu erwartenden Konten\\
-* $:=$ signisalisiert den Anfang des ersten Kontos\\
-/ $:=$ trennt die Konten und Beträge von einander\\
-\& $:=$ signisalisiert den Anfang des ersten Betrages\\
+- $:=$ Buchungssatz hat links mehr Konten als rechts\\
+2 | 3 | 4 $:=$ die Anzahl der zu erwartenden Kontos\\
+* $:=$ signalisiert den Anfang des ersten Kontos\\
+/ $:=$ trennt die Kontos und Beträge voneinander\\
+\& $:=$ signalisiert den Anfang des ersten Betrages\\
 
 \subsection{Implementierung}
 
@@ -747,7 +762,7 @@ MainModel.contentForTxt.add(MainModel.contentForTxt.size()-1, "                "
 MainModel.contentForTxt.addLast("                        " + round(price3));
 \end{lstlisting}
 
-\noindent Der obenstehende Code deckt die Fälle der zweistufigen Buchungssätze mit mehr Konten auf der linken Seite ab. Die anderen Fälle können von der Leserin oder dem Leser selbst nachvollzogen werden. Gleiches gilt für folgenden Code.\\
+\noindent Der obenstehende Code deckt die Fälle der zweistufigen Buchungssätze mit mehr Konten auf der linken Seite ab. Die anderen Fälle können von dem/der LeserIn selbst erschlossen werden. Gleiches gilt für folgenden Code.\\
 
 \subsubsection{mit Encodierung}
 \begin{lstlisting}
@@ -759,33 +774,34 @@ MainModel.contentForTxt_load.add("&" + round(price1) + "/" + round(price2) + "/"
 
 
 \chapter{Decodierung}
-\rhead{KAPITEL 15.  DECODIERUNG}
-Dieser Part ist wesentlich anspruchsvoller als letzterer. Deswegen wird diesmal auch der entworfene Code erklärt.
+\rhead{KAPITEL 16.  DECODIERUNG}
+\lhead{\thepage}
+Dieser Part ist wesentlich anspruchsvoller als der vorherige. Deswegen wird diesmal auch der entworfene Code erklärt.
 
 \section{Vorbereitung}
-Bevor wir uns den Code anschauen, sollte die Leserin oder der Leser wissen, dass die Buchungssätze in einen character-Array geladen werden, da bei der Entschlüsselung jedes einzelne Zeichen von größter Bedeutung ist.
+Bevor wir uns den Code anschauen, sollte der/die LeserIn wissen, dass die Buchungssätze in einen character-Array geladen werden, da bei der Entschlüsselung jedes einzelne Zeichen von größter Bedeutung ist.
 
 \section{Umsetzung}
 
 
 
-\noindent ,,leftmore'' signalisiert hier, dass der Buchungssatz mehr Konten auf der linken Seite enthält. Nachdem der Austrittsfall abgeklärt wurde, werden zwei Listen angelegt, in welchen später die herausgelesenen Konten beziehungsweise Beträge gespeichert werden. Die Variable ,,kontoCount'' wird später zur Unterscheidung der Buchungssatzarten verwendet. Es wird dann Schritt für Schritt überprüft, ob die Eingabe passt und kontoCount wird gesetzt. (siehe A.4.1)  Dann folgt diese Zeile:\\
+\noindent ,,leftmore'' signalisiert hier, dass der Buchungssatz mehr Kontos auf der linken Seite enthält. Nachdem der Austrittsfall abgeklärt wurde, werden zwei Listen angelegt, in welchen später die herausgelesenen Kontos beziehungsweise Beträge gespeichert werden. Die Variable ,,kontoCount'' wird später zur Unterscheidung der Buchungssatzarten verwendet. Es wird dann Schritt für Schritt überprüft, ob die Eingabe passt und kontoCount wird gesetzt. (siehe A.4.1)\\
 
 
 
-\noindent Sie ruft zweimal eine Methode auf, die die Liste weiter entschlüsselt. Als Argument geben wir dabei eine Liste mit, in welche die Konten beziehungsweise Beträge gespeichert werden sollen. (siehe A.4.2)\\
+\noindent Dann folgt diese Zeile: (siehe A.4.2) Sie ruft zweimal eine Methode auf, die die Liste weiter entschlüsselt. Als Argument geben wir dabei eine Liste mit, in welche die Konten beziehungsweise Beträge gespeichert werden sollen.\\
 
 
-\noindent Aus bestimmten Gründen wird am Anfang ein leerer Eintrag eingefügt. In einer for-Schleife wird dann auf ein ,,/''-Zeichen gewartet. Bei einem Treffer folgt dann ein rekursiver Aufruf. (siehe A.4.3)  Für diesen wird dann die else-Variante der Funktion interessant, die so lautet:\\
+\noindent In einer for-Schleife wird dann auf ein ,,/''-Zeichen gewartet. Bei einem Treffer folgt dann ein rekursiver Aufruf. (siehe A.4.3)  Für diesen wird dann die else-Variante der Funktion interessant, die so lautet: (siehe A.4.4)\\
 
 
-\noindent \& beziehungsweise \# beziehungsweise -1 bedeuten den Anfang der Beträge beziehungsweise den Anfang eines neuen Buchungssatzes beziehungsweise das Ende der Liste und deshalb ist die Konsequenz die Rückgabe der Methode mit dem aktuellen Index. Bei der ersten Rückgabe, wird die Methode von der Aufrufermethode erneut mit dem aktuellen Index und der Liste der Beträge aufgerufen. Die Aufgabe ist nun die Beträge herauszufiltern und mit diesen die Liste zu füllen.\\
+\noindent \& beziehungsweise \# beziehungsweise -1 bedeuten den Anfang der Beträge beziehungsweise den Anfang eines neuen Buchungssatzes beziehungsweise das Ende der Liste und deshalb ist die Konsequenz die Rückgabe der Methode mit dem aktuellen Index. Bei der ersten Rückgabe wird die Methode von der Aufrufermethode erneut mit dem aktuellen Index und der Liste der Beträge aufgerufen. Die Aufgabe ist nun, die Beträge herauszufiltern und mit diesen die Liste zu füllen.\\
 
-\noindent Ansonsten ist das Zeichen eine Konto beziehungsweise Betragnummer und deshalb wird sie dem angefangenen Konto beziehungsweise Betrag und anschließend der Liste hinzugefügt. Das wird so lange gemacht, bis die anderen Fälle wieder eintreten. Angenommen es trit nun der Fall ,,-1'' beziehungsweise ,,\#'' ein. Das heißt, dass nun das Ende der Liste erreicht ist beziehungsweise ein Buchungssatz vollständig abgeschlossen ist, also bereits Kontonummern und Beträge vollständig in den Listen sind und diese wiederum bereit zur Verarbeitung sind. (siehe A.4.4)\\
+\noindent Ansonsten ist das Zeichen ein Konto beziehungsweise eine Betragnummer und deshalb wird sie dem angefangenen Konto beziehungsweise Betrag und anschließend zur Liste hinzugefügt. Das wird so lange gemacht, bis die anderen Fälle wieder eintreten. Angenommen es tritt nun der Fall ,,-1'' beziehungsweise ,,\#'' ein. Das heißt, dass nun das Ende der Liste erreicht ist beziehungsweise ein Buchungssatz vollständig abgeschlossen ist, also bereits Kontonummern und Beträge vollständig in den Listen sind und diese wiederum bereit zur Verarbeitung sind.\\
 
 
 
-\noindent Es wird nun, auf Basis des Inhalts von kontoCount, entschieden, welche Routine zum Ausgeben der Buchungssätze gewählt werden soll. Diese Routinen sind selbsterklärend. Erklärungsbedarf hat möglicherweise der rekursive Aufruf in der letzten Code-Zeile: Die Funktion ist ja oben zurückgekehrt, weil ein Buchungssatz vollständig decodiert wurde. Es können natürlich noch weitere folgen, bei denen dann wieder von vorne begonnen werden muss und deshalb wird die Funktion erneut aufgerufen. (siehe A.4.5)
+\noindent Es wird nun auf Basis des Inhalts von kontoCount entschieden, welche Routine zum Ausgeben der Buchungssätze gewählt werden soll. Diese Routinen sind selbsterklärend. Erklärungsbedarf hat möglicherweise der rekursive Aufruf in der letzten Code-Zeile: Die Funktion ist ja oben zurückgekehrt, weil ein Buchungssatz vollständig decodiert wurde. Es können natürlich noch weitere folgen, bei denen dann wieder von vorne begonnen werden muss und deshalb wird die Funktion erneut aufgerufen. (siehe A.4.5)
 \newpage
 
 
@@ -795,7 +811,13 @@ Bevor wir uns den Code anschauen, sollte die Leserin oder der Leser wissen, dass
 \addcontentsline{toc}{part}{Zusammenfassung} 
 \rhead{}
  
-In disCount wurden einige objektorientierte Konzepte implementiert. Dazu gehören die Vererbung und das MVC-Pattern. Letzteres wurde in einer etwas modifizierten Art umgesetzt. Die Benutzeroberfläche ist in mehrere Hauptarbeitsflächen gegliedert und darauf ausgelegt, auch kleinere Bildschirmauflösungen zu unterstützen. Es wurden Methoden zur Darstellung von verschiedenen Buchungssatzarten entwickelt. Auf einen Ausnahmefall, die Abschreibung, wird besonders eingegangen. Mit der Lösungsvorschläge-Funktion können SchülerInnen fertige Lösungen auf eine Datenbank hochladen. Anderen BenutzerInnen werden diese Lösungen bei teilweiser Übereinstimmung vorgeschlagen. Die BenutzerInnen können den Lösungsvorschlag mit einem Daumen hoch oder runter bewerten. Die Fehlerkorrektur kontrolliert die zur Evaluation freigegebene Aufgabe und weist auch auf die Art des Fehlers hin. Zu determinieren, ob nun ein Buchungssatz zu viel oder zu wenig ist oder ob er einfach nur fehlerhaft ist, stellt eine Herausforderung dar. Die Tabellenkalkulation in disCount ist in der Lage Berechnungen durch Eingabe von Befehlen durchzuführen. Damit SchülerInnen ihre Arbeit exportieren und importieren können, benötigt es ein eigenes Dateiformat. Buchungssätze werden beim Export in das eigens entwickelte Dateiformat ,,dc'' encodiert und beim Import wieder decodiert.
+In disCount wurden einige objektorientierte Konzepte implementiert. Dazu gehören die Vererbung und das MVC-Pattern. Letzteres wurde in einer etwas modifizierten Art umgesetzt. Die Benutzeroberfläche ist in mehrere Hauptarbeitsflächen gegliedert und darauf ausgelegt, auch kleinere Bildschirmauflösungen zu unterstützen. Es wurden Methoden zur Darstellung von verschiedenen Buchungssatzarten entwickelt. Auf einen Ausnahmefall, die Abschreibung, wird besonders eingegangen. Mit der Lösungsvorschläge-Funktion können SchülerInnen fertige Lösungen auf eine Datenbank hochladen. Anderen BenutzerInnen werden diese Lösungen bei teilweiser Übereinstimmung vorgeschlagen. Die BenutzerInnen können den Lösungsvorschlag mit einem Daumen hoch oder runter bewerten. Die Fehlerkorrektur kontrolliert die zur Evaluation freigegebene Aufgabe und weist auch auf die Art des Fehlers hin. Zu determinieren, ob nun ein Buchungssatz zu viel oder zu wenig ist oder ob er einfach nur fehlerhaft ist, stellt eine Herausforderung dar. Durch die Möglichkeit, Prüfungen in disCount durchzuführen, ersparen sich die Lehrpersonen nun die Korrektur- und Auswertungsarbeit, da disCount all diese Aufgaben übernimmt. Die Tabellenkalkulation in disCount ist in der Lage, Berechnungen durch Eingabe von Befehlen durchzuführen. Damit SchülerInnen ihre Arbeit exportieren und importieren können, benötigt es ein eigenes Dateiformat. Buchungssätze werden beim Export in das eigens entwickelte Dateiformat ,,dc'' encodiert und beim Import wieder decodiert.
+
+\newpage
+
+
+\addcontentsline{toc}{chapter}{Eidesstattliche Erklärung}
+\includepdf[pages=-]{images/EidesstattlicheErklaerung}
 
 \bibliographystyle{plain}
 \bibliography{literatur}
@@ -811,6 +833,9 @@ In disCount wurden einige objektorientierte Konzepte implementiert. Dazu gehöre
 
 \includepdf[pages=-]{images/begleitprotokoll}
 
+\newpage
+\includepdf[pages=-]{images/meilensteine}
+
 
 \appendix
 \addcontentsline{toc}{part}{Anhang}						
@@ -819,7 +844,7 @@ In disCount wurden einige objektorientierte Konzepte implementiert. Dazu gehöre
 \section{UML-Diagramm}
 \begin{figure}[h]
 	\centering
-	\includegraphics[height=16cm]{images/mvc_dc}
+	\includegraphics[height=15.7cm]{images/mvc_dc}
 \end{figure}
 
 \newpage
